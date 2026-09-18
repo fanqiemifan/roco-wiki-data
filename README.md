@@ -53,4 +53,46 @@ const pets = await res.json();
 
 ## 更新数据
 
-修改 `data/` 下的 JSON 并推送到 `main` 分支即可，jsDelivr 与 GitHub Pages 会自动同步（jsDelivr 有约 12 小时缓存，可用 `@<commit>` 立即取到最新内容）。
+修改 `data/` 下的 JSON 并推送到 `main` 分支即可，jsDelivr 与 GitHub Pages 会自动同步（jsDelivr 有约 12 小时缓存，可用 `@<commit>` 立即取到最新内容）。`data/SHA256SUMS` 无需手动维护，CI 会自动重算并提交。
+
+## 完整性校验（防劫持）
+
+所有访问端点均为 HTTPS，但 HTTPS 防不了「返回合法证书的假内容」（DNS 劫持、CDN 缓存投毒、镜像篡改）。因此仓库提供 `data/SHA256SUMS` 校验文件，并由 GitHub Actions 自动保障：
+
+- **数据更新时**：自动重算各 JSON 的 SHA-256，更新 `data/SHA256SUMS`；
+- **每 6 小时巡检**：从 jsDelivr 和 GitHub Pages 实际下载文件，与仓库内哈希逐一比对，不一致则该次 Action 失败（GitHub 默认会给仓库所有者发失败通知邮件），即可第一时间发现镜像被劫持。
+
+### 下载后手动校验
+
+```bash
+base="https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data"
+curl -fsSL "$base/SHA256SUMS" -o SHA256SUMS
+for f in pets.json final_forms.json attribute_mapping.json; do
+  curl -fsSL "$base/$f" -o "$f"
+done
+shasum -a 256 -c SHA256SUMS   # macOS；Linux 用 sha256sum -c SHA256SUMS
+```
+
+三行输出 `OK` 即内容未被篡改。基准哈希以 GitHub 仓库为准；更严格的场景可在固定 commit 的 URL 上取 SHA256SUMS（`@<commit>` 内容不可变）。
+
+### 前端 / 客户端内置校验
+
+发布客户端时，把当时版本的哈希写死在代码里（从 `data/SHA256SUMS` 取），下载后比对：
+
+```javascript
+const EXPECTED_SHA256 = {
+  'pets.json': 'b2b4d119ef51cd9420ca13e4fda40570326017855b537e3bf38b54f1af2e35b9',
+  // 其他文件同理，发版时从 data/SHA256SUMS 取最新值
+};
+
+const buf = await (await fetch(url)).arrayBuffer();
+const hex = [...new Uint8Array(await crypto.subtle.digest('SHA-256', buf))]
+  .map(b => b.toString(16).padStart(2, '0')).join('');
+if (hex !== EXPECTED_SHA256['pets.json']) throw new Error('数据校验失败，可能被劫持');
+```
+
+网页用 `<script>`/`<link>` 标签加载时，也可直接用 SRI 的 `integrity` 属性（`sha384-<base64>`，可用 `openssl dgst -sha384 -binary 文件 | openssl base64 -A` 生成）。
+
+### 信任边界
+
+这套机制校验的是「CDN / Pages 镜像与 GitHub 仓库内容是否一致」，可防 DNS 劫持、缓存投毒、CDN 篡改。它不能防 GitHub 仓库本身被改（写权限泄露）；如有该需求，可对 `SHA256SUMS` 做离线签名（如 minisign），公钥内置到客户端，此处暂未启用。
