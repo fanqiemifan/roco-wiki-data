@@ -95,4 +95,82 @@ if (hex !== EXPECTED_SHA256['pets.json']) throw new Error('数据校验失败，
 
 ### 信任边界
 
-这套机制校验的是「CDN / Pages 镜像与 GitHub 仓库内容是否一致」，可防 DNS 劫持、缓存投毒、CDN 篡改。它不能防 GitHub 仓库本身被改（写权限泄露）；如有该需求，可对 `SHA256SUMS` 做离线签名（如 minisign），公钥内置到客户端，此处暂未启用。
+哈希巡检校验的是「CDN / Pages 镜像与 GitHub 仓库内容是否一致」，可防 DNS 劫持、缓存投毒、CDN 篡改。打包软件的热更新请使用下一节的签名校验，可进一步防仓库内容被篡改。
+
+## 热更新签名校验（打包软件防污染下载）
+
+软件热更新不能只靠 HTTPS——链路上的污染（DNS 劫持、假 CDN 内容）会带着合法证书原样到达客户端。因此每个数据文件都附带离线签名 `data/<文件名>.sig`（RSA-2048，SHA-256 + PKCS#1 v1.5，覆盖文件全部字节）：**私钥只存在于维护者本机 `~/.roco-wiki-signing/` 和 GitHub Secrets（`SIGNING_PRIVATE_KEY`）**，公钥 [`signing-key.pub`](signing-key.pub) 内置到软件里。私钥不泄露，任何人都无法伪造可通过校验的数据，CI 在每次数据更新时自动重签。
+
+### 客户端更新流程（fail-closed）
+
+1. 从同一来源下载 `pets.json` 与 `pets.json.sig`；
+2. 用内置公钥验签，**失败则丢弃本次下载，沿用本地旧数据，稍后重试**；
+3. 验签通过才解析并替换本地缓存。
+
+注意：公钥必须**编译/打包进软件**，运行时从网络上取公钥会形成循环信任，等于没防。
+
+### 客户端验签示例
+
+Node / Electron：
+
+```javascript
+const crypto = require('node:crypto');
+
+// 打包时把 signing-key.pub 的内容整体内置为字符串
+const PUBLIC_KEY = `-----BEGIN PUBLIC KEY-----
+...
+-----END PUBLIC KEY-----`;
+
+async function fetchVerified(baseUrl, file) {
+  const [data, sig] = await Promise.all([
+    (await fetch(`${baseUrl}/${file}`)).arrayBuffer(),
+    (await fetch(`${baseUrl}/${file}.sig`)).arrayBuffer(),
+  ]);
+  const ok = crypto.verify('sha256', Buffer.from(data), PUBLIC_KEY, Buffer.from(sig));
+  if (!ok) throw new Error(`${file} 签名校验失败，可能被污染，拒绝使用`);
+  return JSON.parse(Buffer.from(data).toString('utf8'));
+}
+```
+
+浏览器端用 WebCrypto：`crypto.subtle.importKey('spki', der, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify'])` 后 `crypto.subtle.verify(...)`。
+
+Python：
+
+```python
+from cryptography.hazmat.primitives import hashes, serialization
+from cryptography.hazmat.primitives.asymmetric import padding
+
+pub = serialization.load_pem_public_key(open('signing-key.pub', 'rb').read())
+data = httpx.get(f'{base}/pets.json').content
+sig = httpx.get(f'{base}/pets.json.sig').content
+pub.verify(sig, data, padding.PKCS1v15(), hashes.SHA256())  # 失败抛 InvalidSignature
+```
+
+C# / .NET：
+
+```csharp
+using var rsa = RSA.Create();
+rsa.ImportSubjectPublicKeyInfo(pubKeyPemBytes, out _);  // .NET Core 3+；Unity 需自备 PEM 解析或 BouncyCastle
+bool ok = rsa.VerifyData(dataBytes, sigBytes, HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1);
+```
+
+Go：
+
+```go
+block, _ := pem.Decode(pubPem)
+parsed, err := x509.ParsePKIXPublicKey(block.Bytes)
+pub := parsed.(*rsa.PublicKey)
+if err := rsa.VerifyPKCS1v15(pub, crypto.SHA256, data, sig); err != nil {
+    // 签名不符，拒绝使用
+}
+```
+
+### 密钥保管与轮换
+
+- 私钥 `~/.roco-wiki-signing/private-key.pem` **务必备份**；丢失后只能生成新密钥对，并通过发布软件更新替换内置公钥（旧软件只认旧公钥）。
+- 更换密钥：生成新密钥对 → `gh secret set SIGNING_PRIVATE_KEY` 更新 Secrets → 推送新 `signing-key.pub` → 发布内置新公钥的软件版本。
+- CI 自动签名意味着「获得仓库写权限的攻击者可让 CI 替其签名」；若要连这一层也防住，可改为本地手动签名后再推送：
+
+```bash
+openssl dgst -sha256 -sign ~/.roco-wiki-signing/private-key.pem -out data/pets.json.sig data/pets.json
+```
