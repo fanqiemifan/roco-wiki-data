@@ -61,17 +61,30 @@ jobs:
           sha_file="$GITHUB_WORKSPACE/data/SHA256SUMS"
           pub="$GITHUB_WORKSPACE/signing-key.pub"
           files=$(awk '{print $2}' "$sha_file")
-          rm -rf /tmp/jsdelivr && mkdir -p /tmp/jsdelivr
-          cp "$sha_file" /tmp/jsdelivr/
-          cd /tmp/jsdelivr
-          for f in $files; do
-            curl -fsSL "https://cdn.jsdelivr.net/gh/${{ github.repository }}@${{ steps.base.outputs.sha }}/data/$f" -o "$f"
-            curl -fsSL "https://cdn.jsdelivr.net/gh/${{ github.repository }}@${{ steps.base.outputs.sha }}/data/$f.sig" -o "$f.sig"
+          for attempt in 1 2 3 4 5; do
+            rm -rf /tmp/jsdelivr && mkdir -p /tmp/jsdelivr
+            cp "$sha_file" /tmp/jsdelivr/
+            cd /tmp/jsdelivr
+            ok=1
+            for f in $files; do
+              if ! curl -fsSL "https://cdn.jsdelivr.net/gh/${{ github.repository }}@${{ steps.base.outputs.sha }}/data/$f" -o "$f"; then ok=0; break; fi
+              if ! curl -fsSL "https://cdn.jsdelivr.net/gh/${{ github.repository }}@${{ steps.base.outputs.sha }}/data/$f.sig" -o "$f.sig"; then ok=0; break; fi
+            done
+            if [ "$ok" -eq 1 ] && sha256sum -c SHA256SUMS; then
+              sig_ok=1
+              for f in $files; do
+                openssl dgst -sha256 -verify "$pub" -signature "$f.sig" "$f" || sig_ok=0
+              done
+              if [ "$sig_ok" -eq 1 ]; then
+                echo "jsDelivr 哈希与签名校验通过"
+                exit 0
+              fi
+            fi
+            echo "第 $attempt 次校验未通过（新 commit 可能尚未在 CDN 索引），30 秒后重试"
+            sleep 30
           done
-          sha256sum -c SHA256SUMS
-          for f in $files; do
-            openssl dgst -sha256 -verify "$pub" -signature "$f.sig" "$f"
-          done
+          echo "::error::jsDelivr 内容与仓库不一致（哈希或签名不符），可能被劫持"
+          exit 1
 
       - name: 校验 GitHub Pages 内容（哈希 + 签名）
         run: |
