@@ -19,20 +19,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 重新生成 SHA256SUMS
+      - name: 重新生成 SHA256SUMS 并重签各数据文件
+        env:
+          SIGNING_PRIVATE_KEY: ${{ secrets.SIGNING_PRIVATE_KEY }}
         run: |
           cd data
           sha256sum *.json > SHA256SUMS
+          printf '%s' "$SIGNING_PRIVATE_KEY" > /tmp/signing-key.pem
+          for f in *.json; do
+            openssl dgst -sha256 -sign /tmp/signing-key.pem -out "$f.sig" "$f"
+          done
+          rm -f /tmp/signing-key.pem
 
       - name: 有变化则自动提交
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/SHA256SUMS
+          git add data/
           if git diff --cached --quiet; then
-            echo "SHA256SUMS 无变化，跳过提交"
+            echo "SHA256SUMS 与签名无变化，跳过提交"
           else
-            git commit -m "chore: 自动更新 SHA256SUMS [skip ci]"
+            git commit -m "chore: 自动更新 SHA256SUMS 与签名 [skip ci]"
             git push
           fi
 
@@ -49,21 +56,27 @@ jobs:
         id: base
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      - name: 校验 jsDelivr 内容
+      - name: 校验 jsDelivr 内容（哈希 + 签名）
         run: |
           sha_file="$GITHUB_WORKSPACE/data/SHA256SUMS"
+          pub="$GITHUB_WORKSPACE/signing-key.pub"
           files=$(awk '{print $2}' "$sha_file")
           rm -rf /tmp/jsdelivr && mkdir -p /tmp/jsdelivr
           cp "$sha_file" /tmp/jsdelivr/
           cd /tmp/jsdelivr
           for f in $files; do
             curl -fsSL "https://cdn.jsdelivr.net/gh/${{ github.repository }}@${{ steps.base.outputs.sha }}/data/$f" -o "$f"
+            curl -fsSL "https://cdn.jsdelivr.net/gh/${{ github.repository }}@${{ steps.base.outputs.sha }}/data/$f.sig" -o "$f.sig"
           done
           sha256sum -c SHA256SUMS
+          for f in $files; do
+            openssl dgst -sha256 -verify "$pub" -signature "$f.sig" "$f"
+          done
 
-      - name: 校验 GitHub Pages 内容
+      - name: 校验 GitHub Pages 内容（哈希 + 签名）
         run: |
           sha_file="$GITHUB_WORKSPACE/data/SHA256SUMS"
+          pub="$GITHUB_WORKSPACE/signing-key.pub"
           files=$(awk '{print $2}' "$sha_file")
           base="https://${{ github.repository_owner }}.github.io/roco-wiki-data/data"
           for attempt in 1 2 3 4 5; do
@@ -73,13 +86,20 @@ jobs:
             ok=1
             for f in $files; do
               if ! curl -fsSL "$base/$f" -o "$f"; then ok=0; break; fi
+              if ! curl -fsSL "$base/$f.sig" -o "$f.sig"; then ok=0; break; fi
             done
             if [ "$ok" -eq 1 ] && sha256sum -c SHA256SUMS; then
-              echo "GitHub Pages 校验通过"
-              exit 0
+              sig_ok=1
+              for f in $files; do
+                openssl dgst -sha256 -verify "$pub" -signature "$f.sig" "$f" || sig_ok=0
+              done
+              if [ "$sig_ok" -eq 1 ]; then
+                echo "GitHub Pages 哈希与签名校验通过"
+                exit 0
+              fi
             fi
             echo "第 $attempt 次校验未通过（Pages 可能仍在构建），60 秒后重试"
             sleep 60
           done
-          echo "::error::GitHub Pages 内容与仓库哈希不一致，可能被劫持或构建异常"
+          echo "::error::GitHub Pages 内容与仓库不一致（哈希或签名不符），可能被劫持或构建异常"
           exit 1
