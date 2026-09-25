@@ -1818,15 +1818,6 @@
     "implemented": true
   },
   {
-    "id": 3575,
-    "name": "焰米龙",
-    "form": "",
-    "leader_potential": false,
-    "main_type": "火",
-    "sub_type": null,
-    "implemented": false
-  },
-  {
     "id": 3576,
     "name": "圣凯布米龙",
     "form": "",
@@ -2259,15 +2250,6 @@
     "implemented": true
   },
   {
-    "id": 3767,
-    "name": "章脑丸",
-    "form": "",
-    "leader_potential": false,
-    "main_type": "萌",
-    "sub_type": null,
-    "implemented": true
-  },
-  {
     "id": 3768,
     "name": "智辉章脑",
     "form": "",
@@ -2282,15 +2264,6 @@
     "form": "",
     "leader_potential": false,
     "main_type": "恶",
-    "sub_type": null,
-    "implemented": true
-  },
-  {
-    "id": 3773,
-    "name": "幽铃",
-    "form": "",
-    "leader_potential": false,
-    "main_type": "萌",
     "sub_type": null,
     "implemented": true
   },
