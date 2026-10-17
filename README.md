@@ -7,7 +7,7 @@
 | 文件 | 内容 | 条数 |
 | --- | --- | --- |
 | [`data/pets.json`](data/pets.json) | 宠物完整数据（`pet_id` 为主键，含 `form` 形态字段、`profile.attributes` 六维种族值） | 667 |
-| [`data/final_forms.json`](data/final_forms.json) | 最终形态精简表（字段：`id` / `name` / `form` / `leader_potential` / `main_type` / `sub_type` / `implemented`） | 255 |
+| [`data/final_forms.json`](data/final_forms.json) | 最终形态精简表（字段：`id` / `name` / `form` / `leader_potential` / `main_type` / `sub_type` / `implemented`） | 260 |
 | [`data/attribute_mapping.json`](data/attribute_mapping.json) | 属性编号 → 属性名映射（如 `06`=光、`18`=恶） | 18 |
 
 数据约定：`pets.json` 的 `form` 为空字符串表示无形态；`final_forms.json` 无副属性时 `sub_type` 为 `null`；`pets.json` 顶层 `version` 标记结构版本（v2 无 `profile`，v3 新增 `profile.attributes`，纯新增字段，老消费方解析不受影响）。
@@ -18,7 +18,13 @@
 
 以 `pets.json` 为例，把路径中的文件名替换即可访问其他文件。
 
-### jsDelivr CDN（国内推荐，速度快）
+**新鲜度**：jsDelivr 对 `@main` 有约 12 小时缓存，过期副本的签名依然合法（验签拦不住），会让下游静默滞后——2026-10-17 实测过：仓库已是 667 条 / v3，`@main` 仍返回 657 条 / v2 且验签通过。因此：
+
+- 要**最新数据**：用 GitHub Pages（跟着默认分支走，无长缓存），或 jsDelivr 锁 `@<commit>` / `@<tag>`；
+- 锁 commit/tag 时 jsDelivr 内容不可变、国内也最快，是首选；
+- 下面的 Node 客户端已按此排序：`ref: 'main'` 时 Pages 优先、jsDelivr 兜底，锁定 commit/tag 时 jsDelivr 优先。
+
+### jsDelivr CDN（国内速度快，`@main` 有约 12 小时缓存）
 
 ```text
 https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/pets.json
@@ -28,7 +34,7 @@ https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/attribute_mappi
 
 如需固定版本、避免缓存影响，可用 commit/tag 替换 `@main`，例如 `@75037af`。
 
-### GitHub Pages
+### GitHub Pages（跟着默认分支，取最新用它）
 
 ```text
 https://fanqiemifan.github.io/roco-wiki-data/data/pets.json
@@ -45,18 +51,26 @@ https://raw.githubusercontent.com/fanqiemifan/roco-wiki-data/main/data/pets.json
 ## 快速使用
 
 ```bash
-curl -sL https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/pets.json -o pets.json
+curl -sL https://fanqiemifan.github.io/roco-wiki-data/data/pets.json -o pets.json
 ```
 
 ```javascript
-const res = await fetch('https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/pets.json');
+const res = await fetch('https://fanqiemifan.github.io/roco-wiki-data/data/pets.json');
 const pets = await res.json();
 ```
 
 ## 作为 npm 依赖引入（Node / Electron，推荐）
 
+npm 11 起**默认禁用 git 依赖**，直接 `npm i github:...` 会报 `EALLOWGIT — Fetching packages of type "git" have been disabled`，需要显式放开：
+
 ```bash
-npm i github:fanqiemifan/roco-wiki-data
+npm i github:fanqiemifan/roco-wiki-data --allow-git=all
+```
+
+或在项目 `.npmrc` 里长期放开（团队/CI 都要装时推荐这个）：
+
+```ini
+allow-git=all
 ```
 
 lockfile 会把依赖锁定到具体 commit，升级用 `npm update roco-wiki-data`；`signing-key.pub` 随包进入 `node_modules`，等同于把公钥打包进软件。
@@ -68,6 +82,8 @@ const { loadAll } = require('roco-wiki-data');
 const data = await loadAll({ ref: 'main', cacheDir: './.cache/roco-wiki-data' });
 const attrs = data['pets.json'].json.items[0].profile.attributes;
 ```
+
+`cacheDir` 里存的是**验签通过的原始字节和对应的 `.sig`**，不是重新序列化的 JSON，所以离线读取时会再验一次签：缓存被改动或截断就直接丢弃并抛错，不会返回 `null` 或半截数据。`ref: 'main'` 时来源顺序是 Pages → jsDelivr → raw（原因见「访问方式」的新鲜度说明），锁定 commit/tag 时是 jsDelivr → raw。
 
 不需要签名校验、只要静态读一份快照时，直接引 JSON 子路径：
 
@@ -101,7 +117,7 @@ python getdata/publish_wiki_data.py             # 校验通过后同步到本仓
 ### 下载后手动校验
 
 ```bash
-base="https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data"
+base="https://fanqiemifan.github.io/roco-wiki-data/data"
 curl -fsSL "$base/SHA256SUMS" -o SHA256SUMS
 for f in pets.json final_forms.json attribute_mapping.json; do
   curl -fsSL "$base/$f" -o "$f"
@@ -110,6 +126,8 @@ shasum -a 256 -c SHA256SUMS   # macOS；Linux 用 sha256sum -c SHA256SUMS
 ```
 
 三行输出 `OK` 即内容未被篡改。基准哈希以 GitHub 仓库为准；更严格的场景可在固定 commit 的 URL 上取 SHA256SUMS（`@<commit>` 内容不可变）。
+
+注意：校验文件和数据必须取自**同一来源同一版本**。若两者都取自 `jsDelivr@main` 的过期快照，`sha256sum -c` 同样全部 `OK`——它证明的是「这份内容与它的哈希表一致」，不是「这份内容是最新的」。要断言最新，把 SHA256SUMS 从 GitHub 仓库（或 `@<commit>`）取。
 
 ### 前端 / 客户端内置校验
 
