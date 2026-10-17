@@ -6,11 +6,13 @@
 
 | 文件 | 内容 | 条数 |
 | --- | --- | --- |
-| [`data/pets.json`](data/pets.json) | 宠物完整数据（`pet_id` 为主键，含 `form` 形态字段） | 657 |
-| [`data/final_forms.json`](data/final_forms.json) | 最终形态精简表（字段：`id` / `name` / `form` / `leader_potential` / `main_type` / `sub_type` / `implemented`） | 259 |
+| [`data/pets.json`](data/pets.json) | 宠物完整数据（`pet_id` 为主键，含 `form` 形态字段、`profile.attributes` 六维种族值） | 667 |
+| [`data/final_forms.json`](data/final_forms.json) | 最终形态精简表（字段：`id` / `name` / `form` / `leader_potential` / `main_type` / `sub_type` / `implemented`） | 255 |
 | [`data/attribute_mapping.json`](data/attribute_mapping.json) | 属性编号 → 属性名映射（如 `06`=光、`18`=恶） | 18 |
 
-数据约定：`pets.json` 的 `form` 为空字符串表示无形态；`final_forms.json` 无副属性时 `sub_type` 为 `null`。
+数据约定：`pets.json` 的 `form` 为空字符串表示无形态；`final_forms.json` 无副属性时 `sub_type` 为 `null`；`pets.json` 顶层 `version` 标记结构版本（v2 无 `profile`，v3 新增 `profile.attributes`，纯新增字段，老消费方解析不受影响）。
+
+本仓库是对外**唯一数据源**，内容不由此仓库产生：三个 JSON 由 [`roco-Component-Library`](https://github.com/fanqiemifan/roco-Component-Library) 的 `getdata/` 脚本抓取、清洗后发布过来（见下文「更新数据」）。
 
 ## 访问方式
 
@@ -51,9 +53,43 @@ const res = await fetch('https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@
 const pets = await res.json();
 ```
 
+## 作为 npm 依赖引入（Node / Electron，推荐）
+
+```bash
+npm i github:fanqiemifan/roco-wiki-data
+```
+
+lockfile 会把依赖锁定到具体 commit，升级用 `npm update roco-wiki-data`；`signing-key.pub` 随包进入 `node_modules`，等同于把公钥打包进软件。
+
+```javascript
+const { loadAll } = require('roco-wiki-data');
+
+// 联网验签取最新；全部来源失败时自动回退到 cacheDir 里上次验签通过的副本
+const data = await loadAll({ ref: 'main', cacheDir: './.cache/roco-wiki-data' });
+const attrs = data['pets.json'].json.items[0].profile.attributes;
+```
+
+不需要签名校验、只要静态读一份快照时，直接引 JSON 子路径：
+
+```javascript
+const pets = require('roco-wiki-data/data/pets.json');
+const finalForms = require('roco-wiki-data/data/final_forms.json');
+```
+
+`loadFile(name, { ref, cacheDir, timeout, offline })` / `loadAll(opts)` / `fetchVerified(name, opts)` / `verifySignature(buf, sig)` 均可单独使用；ESM 走 `import { loadFile } from 'roco-wiki-data'`。
+
 ## 更新数据
 
-修改 `data/` 下的 JSON 并推送到 `main` 分支即可，jsDelivr 与 GitHub Pages 会自动同步（jsDelivr 有约 12 小时缓存，可用 `@<commit>` 立即取到最新内容）。`data/SHA256SUMS` 无需手动维护，CI 会自动重算并提交。
+不要在本仓库手改 JSON。生产端是 `roco-Component-Library`，在那里跑：
+
+```bash
+python getdata/publish_wiki_data.py --dry-run   # 先看校验结果与将发布的增删
+python getdata/publish_wiki_data.py             # 校验通过后同步到本仓库并推送
+```
+
+脚本会先校验（`count` 与条数一致、`pet_id` 唯一、名称无不可见字符、`final_forms.json` 的 id 全部能在 `pets.json` 里找到、条数不无故减少），通过后才把三个文件写进本地 clone 并提交推送；同时把 `package.json` 的 `version` 改成 `pets.json` 的 `updatetime`（calver，如 `2026.10.17`）。
+
+推送后 CI 自动重算 `data/SHA256SUMS`、重签全部数据文件，并巡检 jsDelivr 与 GitHub Pages 是否与仓库一致。jsDelivr 对 `@main` 有约 12 小时缓存，需要立刻取到最新内容就用 `@<commit>` 或 `@<tag>`。
 
 ## 完整性校验（防劫持）
 
