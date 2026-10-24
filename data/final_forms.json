@@ -2286,6 +2286,15 @@
     "implemented": true
   },
   {
+    "id": 3785,
+    "name": "长江豚",
+    "form": "",
+    "leader_potential": false,
+    "main_type": "水",
+    "sub_type": null,
+    "implemented": true
+  },
+  {
     "id": 3796,
     "name": "果实立方人",
     "form": "",
