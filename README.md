@@ -7,7 +7,7 @@
 | 文件 | 内容 | 条数 |
 | --- | --- | --- |
 | [`data/pets.json`](data/pets.json) | 宠物完整数据（`pet_id` 为主键，含 `form` 形态字段、`profile.attributes` 六维种族值） | 667 |
-| [`data/final_forms.json`](data/final_forms.json) | 最终形态精简表（字段：`id` / `name` / `form` / `leader_potential` / `main_type` / `sub_type` / `implemented`） | 260 |
+| [`data/final_forms.json`](data/final_forms.json) | 最终形态精简表（字段：`id` / `name` / `form` / `leader_potential` / `main_type` / `sub_type` / `implemented`） | 261 |
 | [`data/attribute_mapping.json`](data/attribute_mapping.json) | 属性编号 → 属性名映射（如 `06`=光、`18`=恶） | 18 |
 
 数据约定：`pets.json` 的 `form` 为空字符串表示无形态；`final_forms.json` 无副属性时 `sub_type` 为 `null`；`pets.json` 顶层 `version` 标记结构版本（v2 无 `profile`，v3 新增 `profile.attributes`，纯新增字段，老消费方解析不受影响）。
