@@ -1,7 +1,7 @@
 {
   "name": "roco-wiki-data",
   "version": "2026.10.17",
-  "description": "洛克王国图鉴数据源（pets / final_forms / attribute_mapping）与内置验签的热更新客户端",
+  "description": "洛克王国图鉴数据源（pets / final_forms / attribute_mapping / pets_family）与内置验签的热更新客户端",
   "main": "index.js",
   "exports": {
     ".": {
@@ -10,7 +10,8 @@
     },
     "./data/pets.json": "./data/pets.json",
     "./data/final_forms.json": "./data/final_forms.json",
-    "./data/attribute_mapping.json": "./data/attribute_mapping.json"
+    "./data/attribute_mapping.json": "./data/attribute_mapping.json",
+    "./data/pets_family.json": "./data/pets_family.json"
   },
   "files": [
     "index.js",
