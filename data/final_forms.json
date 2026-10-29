@@ -48,9 +48,9 @@
     "id": 3039,
     "name": "叮叮恶魔",
     "form": "",
-    "leader_potential": false,
-    "main_type": "翼",
-    "sub_type": "恶",
+    "leader_potential": true,
+    "main_type": "恶",
+    "sub_type": "翼",
     "implemented": true
   },
   {
@@ -238,8 +238,8 @@
     "name": "幽影树",
     "form": "",
     "leader_potential": true,
-    "main_type": "草",
-    "sub_type": "幽",
+    "main_type": "幽",
+    "sub_type": "草",
     "implemented": true
   },
   {
@@ -247,8 +247,8 @@
     "name": "影狸",
     "form": "",
     "leader_potential": false,
-    "main_type": "毒",
-    "sub_type": "幽",
+    "main_type": "幽",
+    "sub_type": "毒",
     "implemented": true
   },
   {
@@ -256,8 +256,8 @@
     "name": "锤头鹳",
     "form": "",
     "leader_potential": false,
-    "main_type": "水",
-    "sub_type": "翼",
+    "main_type": "翼",
+    "sub_type": "水",
     "implemented": true
   },
   {
@@ -336,7 +336,7 @@
     "id": 3092,
     "name": "烈火守护",
     "form": "",
-    "leader_potential": false,
+    "leader_potential": true,
     "main_type": "火",
     "sub_type": null,
     "implemented": true
@@ -409,8 +409,8 @@
     "name": "抹茶布丁",
     "form": "",
     "leader_potential": false,
-    "main_type": "草",
-    "sub_type": "水",
+    "main_type": "水",
+    "sub_type": "草",
     "implemented": true
   },
   {
@@ -427,8 +427,8 @@
     "name": "熔岩布丁",
     "form": "",
     "leader_potential": false,
-    "main_type": "火",
-    "sub_type": "水",
+    "main_type": "水",
+    "sub_type": "火",
     "implemented": true
   },
   {
@@ -544,8 +544,8 @@
     "name": "芋香巨角蛛",
     "form": "",
     "leader_potential": false,
-    "main_type": "毒",
-    "sub_type": "虫",
+    "main_type": "虫",
+    "sub_type": "毒",
     "implemented": true
   },
   {
@@ -589,8 +589,8 @@
     "name": "花衣蝶",
     "form": "",
     "leader_potential": false,
-    "main_type": "草",
-    "sub_type": "虫",
+    "main_type": "虫",
+    "sub_type": "草",
     "implemented": true
   },
   {
@@ -607,15 +607,15 @@
     "name": "幻影灵菇",
     "form": "",
     "leader_potential": false,
-    "main_type": "草",
-    "sub_type": "幽",
+    "main_type": "幽",
+    "sub_type": "草",
     "implemented": true
   },
   {
     "id": 3150,
     "name": "夜枭",
     "form": "",
-    "leader_potential": false,
+    "leader_potential": true,
     "main_type": "幽",
     "sub_type": null,
     "implemented": true
@@ -625,8 +625,8 @@
     "name": "古啦多",
     "form": "",
     "leader_potential": false,
-    "main_type": "地",
-    "sub_type": "毒",
+    "main_type": "毒",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -679,8 +679,8 @@
     "name": "咔咔鸟",
     "form": "",
     "leader_potential": false,
-    "main_type": "普通",
-    "sub_type": "翼",
+    "main_type": "翼",
+    "sub_type": "普通",
     "implemented": true
   },
   {
@@ -706,15 +706,15 @@
     "name": "邪眼巨魔",
     "form": "",
     "leader_potential": false,
-    "main_type": "虫",
-    "sub_type": "恶",
+    "main_type": "恶",
+    "sub_type": "虫",
     "implemented": true
   },
   {
     "id": 3189,
     "name": "酷拉",
     "form": "",
-    "leader_potential": false,
+    "leader_potential": true,
     "main_type": "电",
     "sub_type": null,
     "implemented": true
@@ -769,8 +769,8 @@
     "name": "贝古斯",
     "form": "",
     "leader_potential": false,
-    "main_type": "火",
-    "sub_type": "机械",
+    "main_type": "机械",
+    "sub_type": "火",
     "implemented": true
   },
   {
@@ -778,8 +778,8 @@
     "name": "波多西",
     "form": "",
     "leader_potential": false,
-    "main_type": "地",
-    "sub_type": "机械",
+    "main_type": "机械",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -805,8 +805,8 @@
     "name": "海豹船长",
     "form": "",
     "leader_potential": false,
-    "main_type": "水",
-    "sub_type": "武",
+    "main_type": "武",
+    "sub_type": "水",
     "implemented": true
   },
   {
@@ -814,8 +814,8 @@
     "name": "寒音蛇",
     "form": "",
     "leader_potential": false,
-    "main_type": "毒",
-    "sub_type": "萌",
+    "main_type": "萌",
+    "sub_type": "毒",
     "implemented": true
   },
   {
@@ -832,7 +832,7 @@
     "name": "友爱星飞",
     "form": "",
     "leader_potential": false,
-    "main_type": "萌",
+    "main_type": "普通",
     "sub_type": null,
     "implemented": false
   },
@@ -931,8 +931,8 @@
     "name": "獠牙猪",
     "form": "",
     "leader_potential": false,
-    "main_type": "地",
-    "sub_type": "冰",
+    "main_type": "冰",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -949,8 +949,8 @@
     "name": "闪电鳗鱼",
     "form": "",
     "leader_potential": false,
-    "main_type": "水",
-    "sub_type": "电",
+    "main_type": "电",
+    "sub_type": "水",
     "implemented": true
   },
   {
@@ -967,8 +967,8 @@
     "name": "魔眷鸟",
     "form": "",
     "leader_potential": false,
-    "main_type": "翼",
-    "sub_type": "萌",
+    "main_type": "萌",
+    "sub_type": "翼",
     "implemented": true
   },
   {
@@ -1138,8 +1138,8 @@
     "name": "落陨星兔",
     "form": "",
     "leader_potential": false,
-    "main_type": "幽",
-    "sub_type": "幻",
+    "main_type": "幻",
+    "sub_type": "幽",
     "implemented": true
   },
   {
@@ -1183,8 +1183,8 @@
     "name": "翠顶夫人",
     "form": "",
     "leader_potential": false,
-    "main_type": "水",
-    "sub_type": "翼",
+    "main_type": "翼",
+    "sub_type": "水",
     "implemented": true
   },
   {
@@ -1201,8 +1201,8 @@
     "name": "障眼魔",
     "form": "",
     "leader_potential": false,
-    "main_type": "水",
-    "sub_type": "恶",
+    "main_type": "恶",
+    "sub_type": "水",
     "implemented": false
   },
   {
@@ -1228,8 +1228,8 @@
     "name": "徘徊爪爪",
     "form": "",
     "leader_potential": false,
-    "main_type": "毒",
-    "sub_type": "萌",
+    "main_type": "萌",
+    "sub_type": "毒",
     "implemented": false
   },
   {
@@ -1246,8 +1246,8 @@
     "name": "暮星辰",
     "form": "",
     "leader_potential": false,
-    "main_type": "翼",
-    "sub_type": "幻",
+    "main_type": "幻",
+    "sub_type": "翼",
     "implemented": true
   },
   {
@@ -1263,7 +1263,7 @@
     "id": 3377,
     "name": "风滚暮虫",
     "form": "金黄的样子",
-    "leader_potential": false,
+    "leader_potential": true,
     "main_type": "普通",
     "sub_type": "虫",
     "implemented": true
@@ -1273,8 +1273,8 @@
     "name": "九幽菇",
     "form": "",
     "leader_potential": false,
-    "main_type": "草",
-    "sub_type": "地",
+    "main_type": "地",
+    "sub_type": "草",
     "implemented": true
   },
   {
@@ -1336,8 +1336,8 @@
     "name": "蝎子王",
     "form": "",
     "leader_potential": false,
-    "main_type": "地",
-    "sub_type": "恶",
+    "main_type": "恶",
+    "sub_type": "地",
     "implemented": false
   },
   {
@@ -1417,8 +1417,8 @@
     "name": "燃薪虫",
     "form": "",
     "leader_potential": false,
-    "main_type": "草",
-    "sub_type": "火",
+    "main_type": "火",
+    "sub_type": "草",
     "implemented": true
   },
   {
@@ -1435,8 +1435,8 @@
     "name": "梦悠悠",
     "form": "穿星星睡衣的样子",
     "leader_potential": false,
-    "main_type": "光",
-    "sub_type": "幽",
+    "main_type": "幽",
+    "sub_type": "光",
     "implemented": true
   },
   {
@@ -1444,8 +1444,8 @@
     "name": "星光狮",
     "form": "月光能量的样子",
     "leader_potential": false,
-    "main_type": "光",
-    "sub_type": "电",
+    "main_type": "电",
+    "sub_type": "光",
     "implemented": true
   },
   {
@@ -1534,8 +1534,8 @@
     "name": "帕帕斯卡",
     "form": "",
     "leader_potential": false,
-    "main_type": "翼",
-    "sub_type": "机械",
+    "main_type": "机械",
+    "sub_type": "翼",
     "implemented": true
   },
   {
@@ -1551,7 +1551,7 @@
     "id": 3491,
     "name": "泥吼牙",
     "form": "",
-    "leader_potential": false,
+    "leader_potential": true,
     "main_type": "地",
     "sub_type": "翼",
     "implemented": true
@@ -1561,8 +1561,8 @@
     "name": "兽花蕾",
     "form": "",
     "leader_potential": false,
-    "main_type": "草",
-    "sub_type": "光",
+    "main_type": "光",
+    "sub_type": "草",
     "implemented": true
   },
   {
@@ -1578,7 +1578,7 @@
     "id": 3498,
     "name": "风滚暮虫",
     "form": "枯叶的样子",
-    "leader_potential": false,
+    "leader_potential": true,
     "main_type": "普通",
     "sub_type": "虫",
     "implemented": true
@@ -1606,8 +1606,8 @@
     "name": "鳗尾兽",
     "form": "",
     "leader_potential": false,
-    "main_type": "草",
-    "sub_type": "地",
+    "main_type": "地",
+    "sub_type": "草",
     "implemented": true
   },
   {
@@ -1615,8 +1615,8 @@
     "name": "嗜波螺",
     "form": "本来的样子",
     "leader_potential": false,
-    "main_type": "水",
-    "sub_type": "地",
+    "main_type": "地",
+    "sub_type": "水",
     "implemented": true
   },
   {
@@ -1624,8 +1624,8 @@
     "name": "嗜波螺",
     "form": "被污染的样子",
     "leader_potential": false,
-    "main_type": "水",
-    "sub_type": "地",
+    "main_type": "地",
+    "sub_type": "水",
     "implemented": true
   },
   {
@@ -1687,8 +1687,8 @@
     "name": "乌拉塔",
     "form": "极昼的样子",
     "leader_potential": false,
-    "main_type": "火",
-    "sub_type": "恶",
+    "main_type": "恶",
+    "sub_type": "火",
     "implemented": true
   },
   {
@@ -1696,8 +1696,8 @@
     "name": "乌拉塔",
     "form": "极夜的样子",
     "leader_potential": false,
-    "main_type": "冰",
-    "sub_type": "恶",
+    "main_type": "恶",
+    "sub_type": "冰",
     "implemented": true
   },
   {
@@ -1723,8 +1723,8 @@
     "name": "棋骑士",
     "form": "白子",
     "leader_potential": true,
-    "main_type": "地",
-    "sub_type": "武",
+    "main_type": "武",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -1732,8 +1732,8 @@
     "name": "棋绮后",
     "form": "白子",
     "leader_potential": true,
-    "main_type": "地",
-    "sub_type": "武",
+    "main_type": "武",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -1741,8 +1741,8 @@
     "name": "棋齐垒",
     "form": "白子",
     "leader_potential": true,
-    "main_type": "地",
-    "sub_type": "武",
+    "main_type": "武",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -1750,8 +1750,8 @@
     "name": "棋祈督",
     "form": "白子",
     "leader_potential": true,
-    "main_type": "地",
-    "sub_type": "武",
+    "main_type": "武",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -1759,8 +1759,8 @@
     "name": "棋骑士",
     "form": "黑子",
     "leader_potential": true,
-    "main_type": "地",
-    "sub_type": "武",
+    "main_type": "武",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -1768,8 +1768,8 @@
     "name": "棋绮后",
     "form": "黑子",
     "leader_potential": true,
-    "main_type": "地",
-    "sub_type": "武",
+    "main_type": "武",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -1777,8 +1777,8 @@
     "name": "棋齐垒",
     "form": "黑子",
     "leader_potential": true,
-    "main_type": "地",
-    "sub_type": "武",
+    "main_type": "武",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -1786,8 +1786,8 @@
     "name": "棋祈督",
     "form": "黑子",
     "leader_potential": true,
-    "main_type": "地",
-    "sub_type": "武",
+    "main_type": "武",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -1796,7 +1796,7 @@
     "form": "",
     "leader_potential": false,
     "main_type": "毒",
-    "sub_type": null,
+    "sub_type": "普通",
     "implemented": true
   },
   {
@@ -1840,15 +1840,15 @@
     "name": "秩序鱿墨",
     "form": "",
     "leader_potential": false,
-    "main_type": "萌",
-    "sub_type": "幽",
+    "main_type": "幽",
+    "sub_type": "萌",
     "implemented": true
   },
   {
     "id": 3583,
     "name": "月亮砣",
     "form": "上弦的样子",
-    "leader_potential": false,
+    "leader_potential": true,
     "main_type": "毒",
     "sub_type": "萌",
     "implemented": true
@@ -1857,7 +1857,7 @@
     "id": 3585,
     "name": "月亮砣",
     "form": "下弦的样子",
-    "leader_potential": false,
+    "leader_potential": true,
     "main_type": "毒",
     "sub_type": "萌",
     "implemented": true
@@ -1912,8 +1912,8 @@
     "name": "捕尘长绒",
     "form": "",
     "leader_potential": false,
-    "main_type": "地",
-    "sub_type": "虫",
+    "main_type": "虫",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -1921,8 +1921,8 @@
     "name": "食尘短绒",
     "form": "",
     "leader_potential": false,
-    "main_type": "地",
-    "sub_type": "虫",
+    "main_type": "虫",
+    "sub_type": "地",
     "implemented": true
   },
   {
@@ -1966,8 +1966,8 @@
     "name": "窃光蚊",
     "form": "",
     "leader_potential": false,
-    "main_type": "光",
-    "sub_type": "恶",
+    "main_type": "恶",
+    "sub_type": "光",
     "implemented": true
   },
   {
@@ -2047,8 +2047,8 @@
     "name": "稻草守护者",
     "form": "",
     "leader_potential": false,
-    "main_type": "武",
-    "sub_type": "萌",
+    "main_type": "萌",
+    "sub_type": "武",
     "implemented": false
   },
   {
@@ -2056,8 +2056,8 @@
     "name": "绒光优优",
     "form": "",
     "leader_potential": false,
-    "main_type": "光",
-    "sub_type": "地",
+    "main_type": "地",
+    "sub_type": "光",
     "implemented": true
   },
   {
@@ -2065,8 +2065,8 @@
     "name": "半朽蜜果灵",
     "form": "",
     "leader_potential": false,
-    "main_type": "草",
-    "sub_type": "幽",
+    "main_type": "幽",
+    "sub_type": "草",
     "implemented": false
   },
   {
@@ -2092,8 +2092,8 @@
     "name": "离心舞者",
     "form": "",
     "leader_potential": false,
-    "main_type": "机械",
-    "sub_type": "幻",
+    "main_type": "幻",
+    "sub_type": "机械",
     "implemented": false
   },
   {
@@ -2119,8 +2119,8 @@
     "name": "霹雳迪迪",
     "form": "",
     "leader_potential": false,
-    "main_type": "光",
-    "sub_type": "电",
+    "main_type": "电",
+    "sub_type": "光",
     "implemented": true
   },
   {
@@ -2164,8 +2164,8 @@
     "name": "雪影娃娃·春日",
     "form": "",
     "leader_potential": false,
-    "main_type": "草",
-    "sub_type": "冰",
+    "main_type": "冰",
+    "sub_type": "草",
     "implemented": true
   },
   {
@@ -2191,8 +2191,8 @@
     "name": "飞飞钥",
     "form": "",
     "leader_potential": false,
-    "main_type": "虫",
-    "sub_type": "机械",
+    "main_type": "机械",
+    "sub_type": "虫",
     "implemented": true
   },
   {
@@ -2218,8 +2218,8 @@
     "name": "炮米花",
     "form": "",
     "leader_potential": false,
-    "main_type": "萌",
-    "sub_type": null,
+    "main_type": "草",
+    "sub_type": "火",
     "implemented": true
   },
   {
@@ -2281,8 +2281,8 @@
     "name": "幽影树",
     "form": "突变的样子",
     "leader_potential": true,
-    "main_type": "草",
-    "sub_type": "幽",
+    "main_type": "幽",
+    "sub_type": "草",
     "implemented": true
   },
   {
@@ -2307,7 +2307,7 @@
     "id": 3871,
     "name": "音速犬",
     "form": "看守麦田的样子",
-    "leader_potential": false,
+    "leader_potential": true,
     "main_type": "火",
     "sub_type": null,
     "implemented": true
