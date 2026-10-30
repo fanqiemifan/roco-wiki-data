@@ -6,23 +6,21 @@
 
 | 文件 | 内容 | 条数 |
 | --- | --- | --- |
-| [`data/pets.json`](data/pets.json) | 宠物完整数据（`pet_id` 为主键，含 `form` 形态字段、`profile.attributes` 六维种族值） | 667 |
-| [`data/final_forms.json`](data/final_forms.json) | 最终形态精简表（字段：`id` / `name` / `form` / `leader_potential` / `main_type` / `sub_type` / `implemented`） | 261 |
 | [`data/pets_family.json`](data/pets_family.json) | 进化链（`families` → `chains` → `members`，含 `is_final` 终态标记与 `pet_family_map` / `pet_chain_map` 索引） | 194 家族 / 262 条链 |
-| [`data/pets_norm.json`](data/pets_norm.json) | 控制台用的精简版（比 `pets.json` 多 `season` / `feature` / `description` / `skills` 技能 ID / `profile.type_effectiveness`，且自带 `stage` / `form` / `elements` / 四个图片 URL） | 667 |
+| [`data/pets_norm.json`](data/pets_norm.json) | 宠物完整数据（主键 `pet_id`，含 `stage` / `form` / `elements` / 四个图片 URL / `season` / `feature` / `description` / 技能 ID 列表 / `profile.attributes` 与克制关系） | 667 |
 | [`data/attribute_mapping.json`](data/attribute_mapping.json) | 属性编号 → 属性名映射（如 `06`=光、`18`=恶） | 18 |
 
-数据约定：`pets.json` 的 `form` 为空字符串表示无形态；`final_forms.json` 无副属性时 `sub_type` 为 `null`；`pets.json` 顶层 `version` 标记结构版本（v2 无 `profile`，v3 新增 `profile.attributes`，纯新增字段，老消费方解析不受影响）。
+数据约定：`pets_norm.json` 的 `form` 为空字符串表示无形态；`elements` 是同序数组，`elements[0]` 即主属性、`[1]` 为副属性；`skills` 只存技能 ID（技能详情见生产端 `skills.json`）；`profile.type_effectiveness` 已去掉 `type_id`，只保留 `multiplier` 与属性名。
 
 `pets_family.json` 的结构要点：同一图鉴号的多个形态是**并列**的多条 `chains`（按 `family_id` 归到同一家族，`multi_form: true`），上下游一律靠成员的 `previous_pet_id` 串，**不要按图鉴号或名称关联**；成员的 `is_final` 已排除首领化（`condition: "首领化"`）与展示形态（`form` 为 `首领形态` / `领地试炼用`），顶层 `final_pet_ids` 是去重后的终态清单；`pet_chain_map` 给 form 级链 id，`pet_family_map` 给家族 id。
 
-`pets_norm.json` 与 `pets.json` 主键相同（`pet_id`），可以当作后者的超集：`pets.json` 保留 `asset_id` / `element_id` / `season_id` 等原始字段；`pets_norm.json` 换成 `stage` / `form` / `elements` 加四个图片 URL，并补充 `season` 对象、`feature`、`description`、技能 ID 列表（`skills` 只有整数 id，详情见生产端的 `skills.json`）与精简后的克制关系（去掉了 `type_id`）。只想要最小体积用 `pets.json`，要一行拿全用 `pets_norm.json`。
+`pets_norm.json` 是唯一精灵主表（667 条），`pets_family.json` 里的 `pet_family_map` / `pet_chain_map` / 成员 `pet_id` 全部以它为基准；最终形态看进化链成员的 `is_final`（顶层另有去重后的 `final_pet_ids`），不再单独提供最终形态表。
 
-本仓库是对外**唯一数据源**，内容不由此仓库产生：五个 JSON 由 [`roco-Component-Library`](https://github.com/fanqiemifan/roco-Component-Library) 的 `getdata/` 脚本抓取、清洗后发布过来（见下文「更新数据」）。
+本仓库是对外**唯一数据源**，内容不由此仓库产生：三个 JSON 由 [`roco-Component-Library`](https://github.com/fanqiemifan/roco-Component-Library) 的 `getdata/` 脚本抓取、清洗后发布过来（见下文「更新数据」）。
 
 ## 访问方式
 
-以 `pets.json` 为例，把路径中的文件名替换即可访问其他文件。
+以 `pets_norm.json` 为例，把路径中的文件名替换即可访问其他文件。
 
 **新鲜度**：jsDelivr 对 `@main` 有约 12 小时缓存，过期副本的签名依然合法（验签拦不住），会让下游静默滞后——2026-10-17 实测过：仓库已是 667 条 / v3，`@main` 仍返回 657 条 / v2 且验签通过。因此：
 
@@ -33,8 +31,6 @@
 ### jsDelivr CDN（国内速度快，`@main` 有约 12 小时缓存）
 
 ```text
-https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/pets.json
-https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/final_forms.json
 https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/pets_family.json
 https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/pets_norm.json
 https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/attribute_mapping.json
@@ -45,8 +41,6 @@ https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/attribute_mappi
 ### GitHub Pages（跟着默认分支，取最新用它）
 
 ```text
-https://fanqiemifan.github.io/roco-wiki-data/data/pets.json
-https://fanqiemifan.github.io/roco-wiki-data/data/final_forms.json
 https://fanqiemifan.github.io/roco-wiki-data/data/pets_family.json
 https://fanqiemifan.github.io/roco-wiki-data/data/pets_norm.json
 https://fanqiemifan.github.io/roco-wiki-data/data/attribute_mapping.json
@@ -55,17 +49,17 @@ https://fanqiemifan.github.io/roco-wiki-data/data/attribute_mapping.json
 ### GitHub Raw（国内直连不稳定，备用）
 
 ```text
-https://raw.githubusercontent.com/fanqiemifan/roco-wiki-data/main/data/pets.json
+https://raw.githubusercontent.com/fanqiemifan/roco-wiki-data/main/data/pets_norm.json
 ```
 
 ## 快速使用
 
 ```bash
-curl -sL https://fanqiemifan.github.io/roco-wiki-data/data/pets.json -o pets.json
+curl -sL https://fanqiemifan.github.io/roco-wiki-data/data/pets_norm.json -o pets_norm.json
 ```
 
 ```javascript
-const res = await fetch('https://fanqiemifan.github.io/roco-wiki-data/data/pets.json');
+const res = await fetch('https://fanqiemifan.github.io/roco-wiki-data/data/pets_norm.json');
 const pets = await res.json();
 ```
 
@@ -104,7 +98,7 @@ const { loadAll } = require('roco-wiki-data');
 
 // 联网验签取最新；全部来源失败时自动回退到 cacheDir 里上次验签通过的副本
 const data = await loadAll({ ref: 'main', cacheDir: './.cache/roco-wiki-data' });
-const attrs = data['pets.json'].json.items[0].profile.attributes;
+const attrs = data['pets_norm.json'].json.items[0].profile.attributes;
 ```
 
 `cacheDir` 里存的是**验签通过的原始字节和对应的 `.sig`**，不是重新序列化的 JSON，所以离线读取时会再验一次签：缓存被改动或截断就直接丢弃并抛错，不会返回 `null` 或半截数据。`ref: 'main'` 时来源顺序是 Pages → jsDelivr → raw（原因见「访问方式」的新鲜度说明），锁定 commit/tag 时是 jsDelivr → raw。
@@ -112,8 +106,7 @@ const attrs = data['pets.json'].json.items[0].profile.attributes;
 不需要签名校验、只要静态读一份快照时，直接引 JSON 子路径：
 
 ```javascript
-const pets = require('roco-wiki-data/data/pets.json');
-const finalForms = require('roco-wiki-data/data/final_forms.json');
+const pets = require('roco-wiki-data/data/pets_norm.json');
 const families = require('roco-wiki-data/data/pets_family.json');
 const norm = require('roco-wiki-data/data/pets_norm.json');
 ```
@@ -129,7 +122,7 @@ python getdata/publish_wiki_data.py --dry-run   # 先看校验结果与将发布
 python getdata/publish_wiki_data.py             # 校验通过后同步到本仓库并推送
 ```
 
-脚本会先校验（`count` 与条数一致、`pet_id` / `family_id` 唯一、名称无不可见字符、`final_forms.json` 的 id 与 `pets_family.json` 的成员 / 家族索引全部能在 `pets.json` 里找到、条数不无故减少），通过后才把五个文件写进本地 clone 并提交推送；同时把 `package.json` 的 `version` 改成各文件 `updatetime` 里最新的那天（calver，如 `2026.10.30`）。
+脚本会先校验（`count` 与条数一致、`pet_id` / `family_id` 唯一、名称无不可见字符、`pets_family.json` 的成员 / 家族索引全部能在 `pets_norm.json` 里找到、条数不无故减少），通过后才把三个文件写进本地 clone 并提交推送；同时把 `package.json` 的 `version` 改成各文件 `updatetime` 里最新的那天（calver，如 `2026.10.30`）。
 
 推送后 CI 自动重算 `data/SHA256SUMS`、重签全部数据文件，并巡检 jsDelivr 与 GitHub Pages 是否与仓库一致。jsDelivr 对 `@main` 有约 12 小时缓存，需要立刻取到最新内容就用 `@<commit>` 或 `@<tag>`。
 
@@ -145,7 +138,7 @@ python getdata/publish_wiki_data.py             # 校验通过后同步到本仓
 ```bash
 base="https://fanqiemifan.github.io/roco-wiki-data/data"
 curl -fsSL "$base/SHA256SUMS" -o SHA256SUMS
-for f in pets.json final_forms.json pets_family.json pets_norm.json attribute_mapping.json; do
+for f in pets_norm.json pets_family.json attribute_mapping.json; do
   curl -fsSL "$base/$f" -o "$f"
 done
 shasum -a 256 -c SHA256SUMS   # macOS；Linux 用 sha256sum -c SHA256SUMS
@@ -161,14 +154,14 @@ shasum -a 256 -c SHA256SUMS   # macOS；Linux 用 sha256sum -c SHA256SUMS
 
 ```javascript
 const EXPECTED_SHA256 = {
-  'pets.json': 'b2b4d119ef51cd9420ca13e4fda40570326017855b537e3bf38b54f1af2e35b9',
+  'pets_norm.json': '9fee917b7e73e1dc82c6857f49b2fbd94e0f512d48a8807d336b5d8e9efdc79c',
   // 其他文件同理，发版时从 data/SHA256SUMS 取最新值
 };
 
 const buf = await (await fetch(url)).arrayBuffer();
 const hex = [...new Uint8Array(await crypto.subtle.digest('SHA-256', buf))]
   .map(b => b.toString(16).padStart(2, '0')).join('');
-if (hex !== EXPECTED_SHA256['pets.json']) throw new Error('数据校验失败，可能被劫持');
+if (hex !== EXPECTED_SHA256['pets_norm.json']) throw new Error('数据校验失败，可能被劫持');
 ```
 
 网页用 `<script>`/`<link>` 标签加载时，也可直接用 SRI 的 `integrity` 属性（`sha384-<base64>`，可用 `openssl dgst -sha384 -binary 文件 | openssl base64 -A` 生成）。
@@ -183,7 +176,7 @@ if (hex !== EXPECTED_SHA256['pets.json']) throw new Error('数据校验失败，
 
 ### 客户端更新流程（fail-closed）
 
-1. 从同一来源下载 `pets.json` 与 `pets.json.sig`；
+1. 从同一来源下载 `pets_norm.json` 与 `pets_norm.json.sig`；
 2. 用内置公钥验签，**失败则丢弃本次下载，沿用本地旧数据，稍后重试**；
 3. 验签通过才解析并替换本地缓存。
 
@@ -221,8 +214,8 @@ from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding
 
 pub = serialization.load_pem_public_key(open('signing-key.pub', 'rb').read())
-data = httpx.get(f'{base}/pets.json').content
-sig = httpx.get(f'{base}/pets.json.sig').content
+data = httpx.get(f'{base}/pets_norm.json').content
+sig = httpx.get(f'{base}/pets_norm.json.sig').content
 pub.verify(sig, data, padding.PKCS1v15(), hashes.SHA256())  # 失败抛 InvalidSignature
 ```
 
@@ -252,5 +245,5 @@ if err := rsa.VerifyPKCS1v15(pub, crypto.SHA256, data, sig); err != nil {
 - CI 自动签名意味着「获得仓库写权限的攻击者可让 CI 替其签名」；若要连这一层也防住，可改为本地手动签名后再推送：
 
 ```bash
-openssl dgst -sha256 -sign ~/.roco-wiki-signing/private-key.pem -out data/pets.json.sig data/pets.json
+openssl dgst -sha256 -sign ~/.roco-wiki-signing/private-key.pem -out data/pets_norm.json.sig data/pets_norm.json
 ```
