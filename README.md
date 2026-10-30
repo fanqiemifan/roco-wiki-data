@@ -9,13 +9,16 @@
 | [`data/pets.json`](data/pets.json) | 宠物完整数据（`pet_id` 为主键，含 `form` 形态字段、`profile.attributes` 六维种族值） | 667 |
 | [`data/final_forms.json`](data/final_forms.json) | 最终形态精简表（字段：`id` / `name` / `form` / `leader_potential` / `main_type` / `sub_type` / `implemented`） | 261 |
 | [`data/pets_family.json`](data/pets_family.json) | 进化链（`families` → `chains` → `members`，含 `is_final` 终态标记与 `pet_family_map` / `pet_chain_map` 索引） | 194 家族 / 262 条链 |
+| [`data/pets_norm.json`](data/pets_norm.json) | 控制台用的精简版（比 `pets.json` 多 `season` / `feature` / `description` / `skills` 技能 ID / `profile.type_effectiveness`，且自带 `stage` / `form` / `elements` / 四个图片 URL） | 667 |
 | [`data/attribute_mapping.json`](data/attribute_mapping.json) | 属性编号 → 属性名映射（如 `06`=光、`18`=恶） | 18 |
 
 数据约定：`pets.json` 的 `form` 为空字符串表示无形态；`final_forms.json` 无副属性时 `sub_type` 为 `null`；`pets.json` 顶层 `version` 标记结构版本（v2 无 `profile`，v3 新增 `profile.attributes`，纯新增字段，老消费方解析不受影响）。
 
 `pets_family.json` 的结构要点：同一图鉴号的多个形态是**并列**的多条 `chains`（按 `family_id` 归到同一家族，`multi_form: true`），上下游一律靠成员的 `previous_pet_id` 串，**不要按图鉴号或名称关联**；成员的 `is_final` 已排除首领化（`condition: "首领化"`）与展示形态（`form` 为 `首领形态` / `领地试炼用`），顶层 `final_pet_ids` 是去重后的终态清单；`pet_chain_map` 给 form 级链 id，`pet_family_map` 给家族 id。
 
-本仓库是对外**唯一数据源**，内容不由此仓库产生：四个 JSON 由 [`roco-Component-Library`](https://github.com/fanqiemifan/roco-Component-Library) 的 `getdata/` 脚本抓取、清洗后发布过来（见下文「更新数据」）。
+`pets_norm.json` 与 `pets.json` 主键相同（`pet_id`），可以当作后者的超集：`pets.json` 保留 `asset_id` / `element_id` / `season_id` 等原始字段；`pets_norm.json` 换成 `stage` / `form` / `elements` 加四个图片 URL，并补充 `season` 对象、`feature`、`description`、技能 ID 列表（`skills` 只有整数 id，详情见生产端的 `skills.json`）与精简后的克制关系（去掉了 `type_id`）。只想要最小体积用 `pets.json`，要一行拿全用 `pets_norm.json`。
+
+本仓库是对外**唯一数据源**，内容不由此仓库产生：五个 JSON 由 [`roco-Component-Library`](https://github.com/fanqiemifan/roco-Component-Library) 的 `getdata/` 脚本抓取、清洗后发布过来（见下文「更新数据」）。
 
 ## 访问方式
 
@@ -33,6 +36,7 @@
 https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/pets.json
 https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/final_forms.json
 https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/pets_family.json
+https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/pets_norm.json
 https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/attribute_mapping.json
 ```
 
@@ -44,6 +48,7 @@ https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/attribute_mappi
 https://fanqiemifan.github.io/roco-wiki-data/data/pets.json
 https://fanqiemifan.github.io/roco-wiki-data/data/final_forms.json
 https://fanqiemifan.github.io/roco-wiki-data/data/pets_family.json
+https://fanqiemifan.github.io/roco-wiki-data/data/pets_norm.json
 https://fanqiemifan.github.io/roco-wiki-data/data/attribute_mapping.json
 ```
 
@@ -67,7 +72,8 @@ const pets = await res.json();
 查进化链（上一阶段 / 下一阶段）时，顺着 `previous_pet_id` 走，不要按图鉴号关联：
 
 ```javascript
-const fam = await (await fetch('https://fanqiemifan.github.io/roco-wiki-data/data/pets_family.json')).json();
+const fam = await (await fetch('https://fanqiemifan.github.io/roco-wiki-data/data/pets_family.json
+https://fanqiemifan.github.io/roco-wiki-data/data/pets_norm.json')).json();
 const petId = 3296;   // 卡瓦重·雪山附近的样子
 const chain = fam.families
   .flatMap(f => f.chains)
@@ -109,6 +115,7 @@ const attrs = data['pets.json'].json.items[0].profile.attributes;
 const pets = require('roco-wiki-data/data/pets.json');
 const finalForms = require('roco-wiki-data/data/final_forms.json');
 const families = require('roco-wiki-data/data/pets_family.json');
+const norm = require('roco-wiki-data/data/pets_norm.json');
 ```
 
 `loadFile(name, { ref, cacheDir, timeout, offline })` / `loadAll(opts)` / `fetchVerified(name, opts)` / `verifySignature(buf, sig)` 均可单独使用；ESM 走 `import { loadFile } from 'roco-wiki-data'`。
@@ -122,7 +129,7 @@ python getdata/publish_wiki_data.py --dry-run   # 先看校验结果与将发布
 python getdata/publish_wiki_data.py             # 校验通过后同步到本仓库并推送
 ```
 
-脚本会先校验（`count` 与条数一致、`pet_id` / `family_id` 唯一、名称无不可见字符、`final_forms.json` 的 id 与 `pets_family.json` 的成员 / 家族索引全部能在 `pets.json` 里找到、条数不无故减少），通过后才把四个文件写进本地 clone 并提交推送；同时把 `package.json` 的 `version` 改成 `pets.json` 的 `updatetime`（calver，如 `2026.10.17`）。
+脚本会先校验（`count` 与条数一致、`pet_id` / `family_id` 唯一、名称无不可见字符、`final_forms.json` 的 id 与 `pets_family.json` 的成员 / 家族索引全部能在 `pets.json` 里找到、条数不无故减少），通过后才把五个文件写进本地 clone 并提交推送；同时把 `package.json` 的 `version` 改成各文件 `updatetime` 里最新的那天（calver，如 `2026.10.30`）。
 
 推送后 CI 自动重算 `data/SHA256SUMS`、重签全部数据文件，并巡检 jsDelivr 与 GitHub Pages 是否与仓库一致。jsDelivr 对 `@main` 有约 12 小时缓存，需要立刻取到最新内容就用 `@<commit>` 或 `@<tag>`。
 
@@ -138,7 +145,7 @@ python getdata/publish_wiki_data.py             # 校验通过后同步到本仓
 ```bash
 base="https://fanqiemifan.github.io/roco-wiki-data/data"
 curl -fsSL "$base/SHA256SUMS" -o SHA256SUMS
-for f in pets.json final_forms.json pets_family.json attribute_mapping.json; do
+for f in pets.json final_forms.json pets_family.json pets_norm.json attribute_mapping.json; do
   curl -fsSL "$base/$f" -o "$f"
 done
 shasum -a 256 -c SHA256SUMS   # macOS；Linux 用 sha256sum -c SHA256SUMS

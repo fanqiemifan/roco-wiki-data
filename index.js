@@ -17,7 +17,7 @@ const path = require('node:path');
 
 const REPO = 'fanqiemifan/roco-wiki-data';
 const OWNER = 'fanqiemifan';
-const FILES = ['pets.json', 'final_forms.json', 'attribute_mapping.json', 'pets_family.json'];
+const FILES = ['pets.json', 'final_forms.json', 'attribute_mapping.json', 'pets_family.json', 'pets_norm.json'];
 
 const PUBLIC_KEY = fs.readFileSync(path.join(__dirname, 'signing-key.pub'), 'utf8');
 
