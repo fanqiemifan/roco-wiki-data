@@ -1,6 +1,6 @@
 {
   "name": "roco-wiki-data",
-  "version": "2026.10.30",
+  "version": "2026.10.31",
   "description": "洛克王国图鉴数据源（pets_norm / pets_family / skills / attribute_mapping）与内置验签的热更新客户端",
   "main": "index.js",
   "exports": {

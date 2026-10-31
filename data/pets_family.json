@@ -1,15 +1,15 @@
 {
   "version": 2,
   "source": "data/pets_family_raw.json (family extracted)",
-  "updatetime": "2026-10-29",
+  "updatetime": "2026-10-31",
   "stats": {
     "families": 194,
     "chains": 262,
     "multi_form_families": 36,
-    "pets_with_family": 643,
+    "pets_with_family": 637,
     "backfilled": 24,
     "pets_without_family": 0,
-    "pets_total": 667,
+    "pets_total": 661,
     "family_conflicts": 4,
     "final_forms": 261,
     "chains_multi_final": 13
@@ -899,24 +899,6 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5055/icon.png",
               "is_final": false
-            },
-            {
-              "pet_id": 13000172,
-              "name": "恶魔男爵",
-              "form": "领地试炼用",
-              "stage": 2,
-              "display_order": 5,
-              "previous_pet_id": 3010,
-              "condition": "等级达到 40",
-              "condition_level": 40,
-              "evolution_description": "恶魔叮升级到40级后进化为恶魔男爵。",
-              "feature": {
-                "desc": "入场时获得50%吸血，每过量回复5%生命转化为10%物攻。",
-                "name": "贪得无厌",
-                "skill_id": 280032
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000172/icon.png",
-              "is_final": false
             }
           ],
           "final_pet_ids": [
@@ -977,24 +959,6 @@
             "skill_id": 280032
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5055/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 13000172,
-          "name": "恶魔男爵",
-          "form": "领地试炼用",
-          "stage": 2,
-          "display_order": 5,
-          "previous_pet_id": 3010,
-          "condition": "等级达到 40",
-          "condition_level": 40,
-          "evolution_description": "恶魔叮升级到40级后进化为恶魔男爵。",
-          "feature": {
-            "desc": "入场时获得50%吸血，每过量回复5%生命转化为10%物攻。",
-            "name": "贪得无厌",
-            "skill_id": 280032
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000172/icon.png",
           "is_final": false
         }
       ]
@@ -1587,24 +1551,6 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5053/icon.png",
               "is_final": false
-            },
-            {
-              "pet_id": 13000169,
-              "name": "深渊罗隐",
-              "form": "领地试炼用",
-              "stage": 3,
-              "display_order": 6,
-              "previous_pet_id": 3016,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "能量不足时，消耗5%最大生命，代替1能量。生命低于50%时，获得吸血100%。",
-                "name": "盛宴",
-                "skill_id": 280030
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000169/icon.png",
-              "is_final": false
             }
           ],
           "final_pet_ids": [
@@ -1683,24 +1629,6 @@
             "skill_id": 280030
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5053/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 13000169,
-          "name": "深渊罗隐",
-          "form": "领地试炼用",
-          "stage": 3,
-          "display_order": 6,
-          "previous_pet_id": 3016,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "能量不足时，消耗5%最大生命，代替1能量。生命低于50%时，获得吸血100%。",
-            "name": "盛宴",
-            "skill_id": 280030
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000169/icon.png",
           "is_final": false
         }
       ]
@@ -5993,24 +5921,6 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5063/icon.png",
               "is_final": false
-            },
-            {
-              "pet_id": 13000174,
-              "name": "烈焰狂战士",
-              "form": "领地试炼用",
-              "stage": 4,
-              "display_order": 6,
-              "previous_pet_id": 3092,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "己方精灵每使用1次火系技能，自己入场时获得全技能威力+10和物防+5%",
-                "name": "蒸汽革命",
-                "skill_id": 280037
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000174/icon.png",
-              "is_final": false
             }
           ],
           "final_pet_ids": [
@@ -6089,24 +5999,6 @@
             "skill_id": 280037
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5063/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 13000174,
-          "name": "烈焰狂战士",
-          "form": "领地试炼用",
-          "stage": 4,
-          "display_order": 6,
-          "previous_pet_id": 3092,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "己方精灵每使用1次火系技能，自己入场时获得全技能威力+10和物防+5%",
-            "name": "蒸汽革命",
-            "skill_id": 280037
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000174/icon.png",
           "is_final": false
         }
       ]
@@ -10627,24 +10519,6 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5060/icon.png",
               "is_final": false
-            },
-            {
-              "pet_id": 13000171,
-              "name": "风暴酷拉",
-              "form": "领地试炼用",
-              "stage": 3,
-              "display_order": 4,
-              "previous_pet_id": 3189,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "入场后首次行动，所选技能使用次数+1，且该回合每次行动后回复2能量。",
-                "name": "噼啪噼啪！",
-                "skill_id": 280033
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000171/icon.png",
-              "is_final": false
             }
           ],
           "final_pet_ids": [
@@ -10705,24 +10579,6 @@
             "skill_id": 280033
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5060/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 13000171,
-          "name": "风暴酷拉",
-          "form": "领地试炼用",
-          "stage": 3,
-          "display_order": 4,
-          "previous_pet_id": 3189,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "入场后首次行动，所选技能使用次数+1，且该回合每次行动后回复2能量。",
-            "name": "噼啪噼啪！",
-            "skill_id": 280033
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000171/icon.png",
           "is_final": false
         }
       ]
@@ -12919,24 +12775,6 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5054/icon.png",
               "is_final": false
-            },
-            {
-              "pet_id": 13000170,
-              "name": "高帽鹬者",
-              "form": "领地试炼用",
-              "stage": 3,
-              "display_order": 5,
-              "previous_pet_id": 3252,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "本场战斗首次使用的技能获得迅捷。拥有迅捷效果的技能先手+1。",
-                "name": "相争",
-                "skill_id": 280029
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000170/icon.png",
-              "is_final": false
             }
           ],
           "final_pet_ids": [
@@ -13015,24 +12853,6 @@
             "skill_id": 280029
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5054/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 13000170,
-          "name": "高帽鹬者",
-          "form": "领地试炼用",
-          "stage": 3,
-          "display_order": 5,
-          "previous_pet_id": 3252,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "本场战斗首次使用的技能获得迅捷。拥有迅捷效果的技能先手+1。",
-            "name": "相争",
-            "skill_id": 280029
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/13000170/icon.png",
           "is_final": false
         }
       ]
@@ -27438,13 +27258,7 @@
     "5063": 39,
     "5064": 234,
     "5065": 234,
-    "5075": 32,
-    "13000169": 11,
-    "13000170": 96,
-    "13000171": 72,
-    "13000172": 7,
-    "13000173": 234,
-    "13000174": 39
+    "5075": 32
   },
   "pet_chain_map": {
     "3001": 4,
@@ -28083,13 +27897,7 @@
     "5063": 39,
     "5064": 234,
     "5065": 235,
-    "5075": 385,
-    "13000169": 11,
-    "13000170": 96,
-    "13000171": 72,
-    "13000172": 7,
-    "13000173": 234,
-    "13000174": 39
+    "5075": 385
   },
   "backfilled_family": {
     "4005": 1,
