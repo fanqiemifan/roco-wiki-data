@@ -17,6 +17,8 @@ const path = require('node:path');
 
 const REPO = 'fanqiemifan/roco-wiki-data';
 const OWNER = 'fanqiemifan';
+// loadAll 的默认集合是三份核心数据。skills.json（技能表，588 条）体积独立、只有技能类
+// 场景用得到，不进默认集，按需 loadFile('skills.json', opts) 取（同样走验签与缓存）。
 const FILES = ['pets_norm.json', 'pets_family.json', 'attribute_mapping.json'];
 
 const PUBLIC_KEY = fs.readFileSync(path.join(__dirname, 'signing-key.pub'), 'utf8');

@@ -8,15 +8,16 @@
 | --- | --- | --- |
 | [`data/pets_family.json`](data/pets_family.json) | 进化链（`families` → `chains` → `members`，含 `is_final` 终态标记与 `pet_family_map` / `pet_chain_map` 索引） | 194 家族 / 262 条链 |
 | [`data/pets_norm.json`](data/pets_norm.json) | 宠物完整数据（主键 `pet_id`，含 `stage` / `form` / `elements` / 四个图片 URL / `season` / `feature` / `description` / 技能 ID 列表 / `profile.attributes` 与克制关系） | 667 |
+| [`data/skills.json`](data/skills.json) | 技能数据（主键 `skill_id`，含 `name` / `icon` / `description` / `cost` / `power` / `element_type` / `skill_type` / `pet_count` / `flavor_text`），与 `pets_norm.json` 的 `skills` ID 列表对应 | 588 |
 | [`data/attribute_mapping.json`](data/attribute_mapping.json) | 属性编号 → 属性名映射（如 `06`=光、`18`=恶） | 18 |
 
-数据约定：`pets_norm.json` 的 `form` 为空字符串表示无形态；`elements` 是同序数组，`elements[0]` 即主属性、`[1]` 为副属性；`skills` 只存技能 ID（技能详情见生产端 `skills.json`）；`profile.type_effectiveness` 已去掉 `type_id`，只保留 `multiplier` 与属性名。
+数据约定：`pets_norm.json` 的 `form` 为空字符串表示无形态；`elements` 是同序数组，`elements[0]` 即主属性、`[1]` 为副属性；`skills` 只存技能 ID（技能详情见同目录 `skills.json`，按 `skill_id` 反查）；`profile.type_effectiveness` 已去掉 `type_id`，只保留 `multiplier` 与属性名。`skills.json` 的 `element_type` / `skill_type` 是字符串（上游原始响应给的是 `{id, name}` 对象，发布前已归一成名字）。
 
 `pets_family.json` 的结构要点：同一图鉴号的多个形态是**并列**的多条 `chains`（按 `family_id` 归到同一家族，`multi_form: true`），上下游一律靠成员的 `previous_pet_id` 串，**不要按图鉴号或名称关联**；成员的 `is_final` 已排除首领化（`condition: "首领化"`）与展示形态（`form` 为 `首领形态` / `领地试炼用`），顶层 `final_pet_ids` 是去重后的终态清单；`pet_chain_map` 给 form 级链 id，`pet_family_map` 给家族 id。
 
 `pets_norm.json` 是唯一精灵主表（667 条），`pets_family.json` 里的 `pet_family_map` / `pet_chain_map` / 成员 `pet_id` 全部以它为基准；最终形态看进化链成员的 `is_final`（顶层另有去重后的 `final_pet_ids`），不再单独提供最终形态表。
 
-本仓库是对外**唯一数据源**，内容不由此仓库产生：三个 JSON 由 [`roco-Component-Library`](https://github.com/fanqiemifan/roco-Component-Library) 的 `getdata/` 脚本抓取、清洗后发布过来（见下文「更新数据」）。
+本仓库是对外**唯一数据源**，内容不由此仓库产生：四个 JSON 由 [`roco-Component-Library`](https://github.com/fanqiemifan/roco-Component-Library) 的 `getdata/` 脚本抓取、清洗后发布过来（见下文「更新数据」）。
 
 ## 访问方式
 
@@ -33,6 +34,7 @@
 ```text
 https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/pets_family.json
 https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/pets_norm.json
+https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/skills.json
 https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/attribute_mapping.json
 ```
 
@@ -43,6 +45,7 @@ https://cdn.jsdelivr.net/gh/fanqiemifan/roco-wiki-data@main/data/attribute_mappi
 ```text
 https://fanqiemifan.github.io/roco-wiki-data/data/pets_family.json
 https://fanqiemifan.github.io/roco-wiki-data/data/pets_norm.json
+https://fanqiemifan.github.io/roco-wiki-data/data/skills.json
 https://fanqiemifan.github.io/roco-wiki-data/data/attribute_mapping.json
 ```
 
@@ -103,11 +106,19 @@ const attrs = data['pets_norm.json'].json.items[0].profile.attributes;
 
 `cacheDir` 里存的是**验签通过的原始字节和对应的 `.sig`**，不是重新序列化的 JSON，所以离线读取时会再验一次签：缓存被改动或截断就直接丢弃并抛错，不会返回 `null` 或半截数据。`ref: 'main'` 时来源顺序是 Pages → jsDelivr → raw（原因见「访问方式」的新鲜度说明），锁定 commit/tag 时是 jsDelivr → raw。
 
+`loadAll()` 默认只取三份核心数据；技能表不在默认集里，按需单独取（同样验签 + 缓存）：
+
+```javascript
+const skills = await loadFile('skills.json', { ref: 'main', cacheDir: './.cache/roco-wiki-data' });
+const byId = new Map(skills.json.items.map(s => [s.skill_id, s]));
+```
+
 不需要签名校验、只要静态读一份快照时，直接引 JSON 子路径：
 
 ```javascript
 const pets = require('roco-wiki-data/data/pets_norm.json');
 const families = require('roco-wiki-data/data/pets_family.json');
+const skills = require('roco-wiki-data/data/skills.json');
 const norm = require('roco-wiki-data/data/pets_norm.json');
 ```
 
@@ -122,7 +133,7 @@ python getdata/publish_wiki_data.py --dry-run   # 先看校验结果与将发布
 python getdata/publish_wiki_data.py             # 校验通过后同步到本仓库并推送
 ```
 
-脚本会先校验（`count` 与条数一致、`pet_id` / `family_id` 唯一、名称无不可见字符、`pets_family.json` 的成员 / 家族索引全部能在 `pets_norm.json` 里找到、条数不无故减少），通过后才把三个文件写进本地 clone 并提交推送；同时把 `package.json` 的 `version` 改成各文件 `updatetime` 里最新的那天（calver，如 `2026.10.30`）。
+脚本会先校验（`count` 与条数一致、`pet_id` / `family_id` / `skill_id` 唯一、名称无不可见字符、`skills.json` 的 `element_type` / `skill_type` 是字符串而不是上游原始的 `{id, name}` 对象、`pets_family.json` 的成员 / 家族索引全部能在 `pets_norm.json` 里找到、条数不无故减少），通过后才把四个文件写进本地 clone 并提交推送；同时把 `package.json` 的 `version` 改成各文件 `updatetime` 里最新的那天（calver，如 `2026.10.30`）。写入时只把 CRLF 归一成 LF，不做重新序列化，推上去的字节就是生产端那份。
 
 推送后 CI 自动重算 `data/SHA256SUMS`、重签全部数据文件，并巡检 jsDelivr 与 GitHub Pages 是否与仓库一致。jsDelivr 对 `@main` 有约 12 小时缓存，需要立刻取到最新内容就用 `@<commit>` 或 `@<tag>`。
 
@@ -138,7 +149,7 @@ python getdata/publish_wiki_data.py             # 校验通过后同步到本仓
 ```bash
 base="https://fanqiemifan.github.io/roco-wiki-data/data"
 curl -fsSL "$base/SHA256SUMS" -o SHA256SUMS
-for f in pets_norm.json pets_family.json attribute_mapping.json; do
+for f in pets_norm.json pets_family.json skills.json attribute_mapping.json; do
   curl -fsSL "$base/$f" -o "$f"
 done
 shasum -a 256 -c SHA256SUMS   # macOS；Linux 用 sha256sum -c SHA256SUMS
