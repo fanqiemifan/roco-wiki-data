@@ -32,7 +32,7 @@
       "kind": "训练师技能",
       "desc": "对任意血脉的精灵使用，立即回复15%生命，每回合结束时回复15%生命，持续3回合",
       "variant": "trainer",
-      "note": "训练师技能，不属于精灵技能池，pets_norm 的 skills 里不会出现；暂无图标（resources/skills-extra 下无 7010010.png）"
+      "note": "训练师技能，不属于精灵技能池，pets_norm 的 skills 里不会出现"
     },
     {
       "skill_id": 7010020,
