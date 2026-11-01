@@ -14,7 +14,7 @@
 
 数据约定：`pets_norm.json` 的 `form` 为空字符串表示无形态；`elements` 是同序数组，`elements[0]` 即主属性、`[1]` 为副属性；`skills` 只存技能 ID（技能详情见同目录 `skills.json`，按 `skill_id` 反查）；`profile.type_effectiveness` 已去掉 `type_id`，只保留 `multiplier` 与属性名。`skills.json` 的 `element_type` / `skill_type` 是字符串（上游原始响应给的是 `{id, name}` 对象，发布前已归一成名字）。
 
-技能 id 的解析顺序：`skills.json` → `pets_norm.json`（特性 `feature.skill_id`）→ `skills_extra.json` → 消费端内置表。`skills_extra.json` 里的 `variant` 区分 `core`（核心版，威力 80）/ `counter`（应对版，威力 200，图标与核心版同图）/ `builtin`（聚能）/ `trainer`（训练师技能，不属于精灵技能池）/ `resonance`（愿力强化）/ `state`（蓄力，协议只知道在蓄力、推不出具体招式）。`dam_type = 7` 的 `7700006` / `7700106` 系别槽未定，`element` 为 `null`；`7700006` / `7700106` 与训练师技能 `7010010` 连官方图标都没有，属已知缺口。图标不在本仓库，另存于生产端 `resources/skills-extra/{skill_id}.png`。
+技能 id 的解析顺序：`skills.json` → `pets_norm.json`（特性 `feature.skill_id`）→ `skills_extra.json` → 消费端内置表。`skills_extra.json` 里的 `variant` 区分 `core`（核心版，威力 80）/ `counter`（应对版，威力 200，图标与核心版同图）/ `builtin`（聚能）/ `trainer`（训练师技能，不属于精灵技能池）/ `resonance`（愿力强化）/ `state`（蓄力，协议只知道在蓄力、推不出具体招式）。`dam_type = 7` 的 `7700006` / `7700106` 系别槽未定，`element` 为 `null`，这两个 id 连官方图标都没有，属已知缺口。图标不在本仓库，另存于生产端 `resources/skills-extra/{skill_id}.png`。
 
 `pets_family.json` 的结构要点：同一图鉴号的多个形态是**并列**的多条 `chains`（按 `family_id` 归到同一家族，`multi_form: true`），上下游一律靠成员的 `previous_pet_id` 串，**不要按图鉴号或名称关联**；成员的 `is_final` 已排除首领化（`condition: "首领化"`）与展示形态（`form` 为 `首领形态`），顶层 `final_pet_ids` 是去重后的终态清单；`pet_chain_map` 给 form 级链 id，`pet_family_map` 给家族 id。领地试炼副本的 6 只敌人配置（`form: "领地试炼用"`，名字与实装同名、立绘同图）已在生产端剔除，不会出现在任何数据与图片里。
 
