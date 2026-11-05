@@ -1,18 +1,18 @@
 {
   "version": 2,
   "source": "data/pets_family_raw.json (family extracted)",
-  "updatetime": "2026-10-31",
+  "updatetime": "2026-11-05",
   "stats": {
-    "families": 194,
-    "chains": 262,
-    "multi_form_families": 36,
-    "pets_with_family": 637,
+    "families": 211,
+    "chains": 280,
+    "multi_form_families": 37,
+    "pets_with_family": 676,
     "backfilled": 24,
     "pets_without_family": 0,
-    "pets_total": 661,
-    "family_conflicts": 4,
-    "final_forms": 261,
-    "chains_multi_final": 13
+    "pets_total": 700,
+    "family_conflicts": 13,
+    "final_forms": 279,
+    "chains_multi_final": 18
   },
   "families": [
     {
@@ -7325,7 +7325,7 @@
               "name": "雪影冰灵",
               "form": null,
               "stage": 3,
-              "display_order": 4,
+              "display_order": 6,
               "previous_pet_id": 3123,
               "condition": "首领化",
               "condition_level": null,
@@ -7404,7 +7404,7 @@
           "name": "雪影冰灵",
           "form": null,
           "stage": 3,
-          "display_order": 4,
+          "display_order": 6,
           "previous_pet_id": 3123,
           "condition": "首领化",
           "condition_level": null,
@@ -9756,6 +9756,98 @@
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3167/icon.png",
           "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 63,
+      "name": "阿布进化链",
+      "multi_form": false,
+      "base_chain_id": 63,
+      "chains": [
+        {
+          "family_id": 63,
+          "name": "阿布进化链",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3168,
+              "name": "阿布",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用1次能耗为3的技能，自己入场前等级+2。低于80级时受到伤害+30%。",
+                "name": "圣龙的心愿",
+                "skill_id": 200328
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3168/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 5068,
+              "name": "超能阿布",
+              "form": null,
+              "stage": 1,
+              "display_order": 2,
+              "previous_pet_id": 3168,
+              "condition": "首领化",
+              "condition_level": null,
+              "evolution_description": "阿布首领化后成为超能阿布。",
+              "feature": {
+                "desc": "在战斗中每提升1级，获得物攻+5%，低于80级时受到伤害+30%。",
+                "name": "圣龙的守护",
+                "skill_id": 280041
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5068/icon.png",
+              "is_final": false
+            }
+          ],
+          "final_pet_ids": [
+            3168
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3168,
+          "name": "阿布",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用1次能耗为3的技能，自己入场前等级+2。低于80级时受到伤害+30%。",
+            "name": "圣龙的心愿",
+            "skill_id": 200328
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3168/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 5068,
+          "name": "超能阿布",
+          "form": null,
+          "stage": 1,
+          "display_order": 2,
+          "previous_pet_id": 3168,
+          "condition": "首领化",
+          "condition_level": null,
+          "evolution_description": "阿布首领化后成为超能阿布。",
+          "feature": {
+            "desc": "在战斗中每提升1级，获得物攻+5%，低于80级时受到伤害+30%。",
+            "name": "圣龙的守护",
+            "skill_id": 280041
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5068/icon.png",
+          "is_final": false
         }
       ]
     },
@@ -13132,6 +13224,24 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3259/icon.png",
               "is_final": true
+            },
+            {
+              "pet_id": 5067,
+              "name": "圣冠布鲁斯",
+              "form": null,
+              "stage": 3,
+              "display_order": 4,
+              "previous_pet_id": 3259,
+              "condition": "首领化",
+              "condition_level": null,
+              "evolution_description": "冰钻布鲁斯首领化后成为圣冠布鲁斯。",
+              "feature": {
+                "desc": "敌方携带技能总能耗每有1点，自己攻击时威力+10%，若敌方总能耗大于15，自己获得速度+75。",
+                "name": "烈冰钻",
+                "skill_id": 280040
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5067/icon.png",
+              "is_final": false
             }
           ],
           "final_pet_ids": [
@@ -13193,6 +13303,24 @@
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3259/icon.png",
           "is_final": true
+        },
+        {
+          "pet_id": 5067,
+          "name": "圣冠布鲁斯",
+          "form": null,
+          "stage": 3,
+          "display_order": 4,
+          "previous_pet_id": 3259,
+          "condition": "首领化",
+          "condition_level": null,
+          "evolution_description": "冰钻布鲁斯首领化后成为圣冠布鲁斯。",
+          "feature": {
+            "desc": "敌方携带技能总能耗每有1点，自己攻击时威力+10%，若敌方总能耗大于15，自己获得速度+75。",
+            "name": "烈冰钻",
+            "skill_id": 280040
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5067/icon.png",
+          "is_final": false
         }
       ]
     },
@@ -14556,7 +14684,7 @@
               "condition_level": null,
               "evolution_description": null,
               "feature": {
-                "desc": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血50%。",
+                "desc": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血100%。",
                 "name": "异类",
                 "skill_id": 200130
               },
@@ -14574,7 +14702,7 @@
               "condition_level": 16,
               "evolution_description": "觅觅蝠升级到16级后进化为翻翻蝠。",
               "feature": {
-                "desc": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血50%。",
+                "desc": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血100%。",
                 "name": "异类",
                 "skill_id": 200130
               },
@@ -14592,7 +14720,7 @@
               "condition_level": 32,
               "evolution_description": "翻翻蝠升级到32级后进化为夜游魔。",
               "feature": {
-                "desc": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血50%。",
+                "desc": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血100%。",
                 "name": "异类",
                 "skill_id": 200130
               },
@@ -14617,7 +14745,7 @@
           "condition_level": null,
           "evolution_description": null,
           "feature": {
-            "desc": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血50%。",
+            "desc": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血100%。",
             "name": "异类",
             "skill_id": 200130
           },
@@ -14635,7 +14763,7 @@
           "condition_level": 16,
           "evolution_description": "觅觅蝠升级到16级后进化为翻翻蝠。",
           "feature": {
-            "desc": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血50%。",
+            "desc": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血100%。",
             "name": "异类",
             "skill_id": 200130
           },
@@ -14653,7 +14781,7 @@
           "condition_level": 32,
           "evolution_description": "翻翻蝠升级到32级后进化为夜游魔。",
           "feature": {
-            "desc": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血50%。",
+            "desc": "携带的翼系攻击技能获得选择：能耗+1，攻击时吸血100%。",
             "name": "异类",
             "skill_id": 200130
           },
@@ -15250,7 +15378,7 @@
               "condition_level": null,
               "evolution_description": null,
               "feature": {
-                "desc": "天气为雨天时，使用水系攻击技能时吸血50%。",
+                "desc": "天气为雨天时，使用水系攻击技能时吸血100%。",
                 "name": "滴眼液",
                 "skill_id": 200144
               },
@@ -15268,7 +15396,7 @@
               "condition_level": 30,
               "evolution_description": "芽眼魔升级到30级后进化为叶眼魔。",
               "feature": {
-                "desc": "天气为雨天时，使用水系攻击技能时吸血50%。",
+                "desc": "天气为雨天时，使用水系攻击技能时吸血100%。",
                 "name": "滴眼液",
                 "skill_id": 200144
               },
@@ -15286,7 +15414,7 @@
               "condition_level": 50,
               "evolution_description": "叶眼魔升级到50级后进化为障眼魔。",
               "feature": {
-                "desc": "天气为雨天时，使用水系攻击技能时吸血50%。",
+                "desc": "天气为雨天时，使用水系攻击技能时吸血100%。",
                 "name": "滴眼液",
                 "skill_id": 200144
               },
@@ -15311,7 +15439,7 @@
           "condition_level": null,
           "evolution_description": null,
           "feature": {
-            "desc": "天气为雨天时，使用水系攻击技能时吸血50%。",
+            "desc": "天气为雨天时，使用水系攻击技能时吸血100%。",
             "name": "滴眼液",
             "skill_id": 200144
           },
@@ -15329,7 +15457,7 @@
           "condition_level": 30,
           "evolution_description": "芽眼魔升级到30级后进化为叶眼魔。",
           "feature": {
-            "desc": "天气为雨天时，使用水系攻击技能时吸血50%。",
+            "desc": "天气为雨天时，使用水系攻击技能时吸血100%。",
             "name": "滴眼液",
             "skill_id": 200144
           },
@@ -15347,7 +15475,7 @@
           "condition_level": 50,
           "evolution_description": "叶眼魔升级到50级后进化为障眼魔。",
           "feature": {
-            "desc": "天气为雨天时，使用水系攻击技能时吸血50%。",
+            "desc": "天气为雨天时，使用水系攻击技能时吸血100%。",
             "name": "滴眼液",
             "skill_id": 200144
           },
@@ -18000,6 +18128,24 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3120/icon.png",
               "is_final": true
+            },
+            {
+              "pet_id": 5066,
+              "name": "琉璃君主",
+              "form": null,
+              "stage": 2,
+              "display_order": 3,
+              "previous_pet_id": 3120,
+              "condition": "首领化",
+              "condition_level": null,
+              "evolution_description": "琉璃水母首领化后成为琉璃君主。",
+              "feature": {
+                "desc": "使用技能后，敌方获得中毒，获得层数等于中毒印记层数的2倍。",
+                "name": "深层侵蚀",
+                "skill_id": 280039
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5066/icon.png",
+              "is_final": false
             }
           ],
           "final_pet_ids": [
@@ -18043,6 +18189,24 @@
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3120/icon.png",
           "is_final": true
+        },
+        {
+          "pet_id": 5066,
+          "name": "琉璃君主",
+          "form": null,
+          "stage": 2,
+          "display_order": 3,
+          "previous_pet_id": 3120,
+          "condition": "首领化",
+          "condition_level": null,
+          "evolution_description": "琉璃水母首领化后成为琉璃君主。",
+          "feature": {
+            "desc": "使用技能后，敌方获得中毒，获得层数等于中毒印记层数的2倍。",
+            "name": "深层侵蚀",
+            "skill_id": 280039
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5066/icon.png",
+          "is_final": false
         }
       ]
     },
@@ -23584,7 +23748,7 @@
               "condition_level": null,
               "evolution_description": null,
               "feature": {
-                "desc": "自己携带的音波弹/音爆/金属噪音/午夜噪音威力提升，且获得巧变：同系别技能。",
+                "desc": "自己携带的音波弹/音爆/金属噪音/午夜噪音/广播威力提升，且获得巧变：同系别技能。",
                 "name": "换碟",
                 "skill_id": 200287
               },
@@ -23602,7 +23766,7 @@
               "condition_level": 32,
               "evolution_description": "猴麦仔升级到32级后进化为音碟吼。",
               "feature": {
-                "desc": "自己携带的音波弹/音爆/金属噪音/午夜噪音威力提升，且获得巧变：同系别技能。",
+                "desc": "自己携带的音波弹/音爆/金属噪音/午夜噪音/广播威力提升，且获得巧变：同系别技能。",
                 "name": "换碟",
                 "skill_id": 200287
               },
@@ -23627,7 +23791,7 @@
           "condition_level": null,
           "evolution_description": null,
           "feature": {
-            "desc": "自己携带的音波弹/音爆/金属噪音/午夜噪音威力提升，且获得巧变：同系别技能。",
+            "desc": "自己携带的音波弹/音爆/金属噪音/午夜噪音/广播威力提升，且获得巧变：同系别技能。",
             "name": "换碟",
             "skill_id": 200287
           },
@@ -23645,7 +23809,7 @@
           "condition_level": 32,
           "evolution_description": "猴麦仔升级到32级后进化为音碟吼。",
           "feature": {
-            "desc": "自己携带的音波弹/音爆/金属噪音/午夜噪音威力提升，且获得巧变：同系别技能。",
+            "desc": "自己携带的音波弹/音爆/金属噪音/午夜噪音/广播威力提升，且获得巧变：同系别技能。",
             "name": "换碟",
             "skill_id": 200287
           },
@@ -23813,14 +23977,14 @@
             },
             {
               "pet_id": 3737,
-              "name": "​​霹雳迪迪",
+              "name": "霹雳迪迪",
               "form": null,
               "stage": 2,
               "display_order": 2,
               "previous_pet_id": 3736,
               "condition": "等级达到 32",
               "condition_level": 32,
-              "evolution_description": "炫光迪迪升级到32级后进化为​​霹雳迪迪。",
+              "evolution_description": "炫光迪迪升级到32级后进化为霹雳迪迪。",
               "feature": {
                 "desc": "使用光系技能后，回合结束时自己返场。",
                 "name": "安可",
@@ -23856,14 +24020,14 @@
         },
         {
           "pet_id": 3737,
-          "name": "​​霹雳迪迪",
+          "name": "霹雳迪迪",
           "form": null,
           "stage": 2,
           "display_order": 2,
           "previous_pet_id": 3736,
           "condition": "等级达到 32",
           "condition_level": 32,
-          "evolution_description": "炫光迪迪升级到32级后进化为​​霹雳迪迪。",
+          "evolution_description": "炫光迪迪升级到32级后进化为霹雳迪迪。",
           "feature": {
             "desc": "使用光系技能后，回合结束时自己返场。",
             "name": "安可",
@@ -26057,11 +26221,140 @@
                 "skill_id": 200325
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3829,
+              "name": "绿草精灵",
+              "form": "幻鸩园丁的样子",
+              "stage": 1,
+              "display_order": 5,
+              "previous_pet_id": 3775,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3829/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3843,
+              "name": "矮脚爬爬",
+              "form": "毒之花的样子",
+              "stage": 1,
+              "display_order": 10,
+              "previous_pet_id": 3775,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3843/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3854,
+              "name": "缇塔",
+              "form": "星币VIII的样子",
+              "stage": 1,
+              "display_order": 15,
+              "previous_pet_id": 3775,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3854/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3830,
+              "name": "魔草巫灵",
+              "form": "幻鸩园丁的样子",
+              "stage": 2,
+              "display_order": 23,
+              "previous_pet_id": 3829,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "绿草精灵升级到42级后进化为魔草巫灵。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3830/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3836,
+              "name": "记忆石",
+              "form": "毒崇拜的样子",
+              "stage": 1,
+              "display_order": 27,
+              "previous_pet_id": 3776,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "布灵布灵升级到42级后进化为记忆石。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3836/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3844,
+              "name": "恶魔红钻",
+              "form": "毒之花的样子",
+              "stage": 2,
+              "display_order": 32,
+              "previous_pet_id": 3843,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "矮脚爬爬升级到42级后进化为恶魔红钻。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3844/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3855,
+              "name": "声波缇塔",
+              "form": "星币VIII的样子",
+              "stage": 2,
+              "display_order": 38,
+              "previous_pet_id": 3854,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "缇塔升级到42级后进化为声波缇塔。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3855/icon.png",
               "is_final": true
             }
           ],
           "final_pet_ids": [
-            3776
+            3830,
+            3836,
+            3844,
+            3855
           ]
         }
       ],
@@ -26100,6 +26393,132 @@
             "skill_id": 200325
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3829,
+          "name": "绿草精灵",
+          "form": "幻鸩园丁的样子",
+          "stage": 1,
+          "display_order": 5,
+          "previous_pet_id": 3775,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3829/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3843,
+          "name": "矮脚爬爬",
+          "form": "毒之花的样子",
+          "stage": 1,
+          "display_order": 10,
+          "previous_pet_id": 3775,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3843/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3854,
+          "name": "缇塔",
+          "form": "星币VIII的样子",
+          "stage": 1,
+          "display_order": 15,
+          "previous_pet_id": 3775,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3854/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3830,
+          "name": "魔草巫灵",
+          "form": "幻鸩园丁的样子",
+          "stage": 2,
+          "display_order": 23,
+          "previous_pet_id": 3829,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "绿草精灵升级到42级后进化为魔草巫灵。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3830/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3836,
+          "name": "记忆石",
+          "form": "毒崇拜的样子",
+          "stage": 1,
+          "display_order": 27,
+          "previous_pet_id": 3776,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "布灵布灵升级到42级后进化为记忆石。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3836/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3844,
+          "name": "恶魔红钻",
+          "form": "毒之花的样子",
+          "stage": 2,
+          "display_order": 32,
+          "previous_pet_id": 3843,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "矮脚爬爬升级到42级后进化为恶魔红钻。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3844/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3855,
+          "name": "声波缇塔",
+          "form": "星币VIII的样子",
+          "stage": 2,
+          "display_order": 38,
+          "previous_pet_id": 3854,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "缇塔升级到42级后进化为声波缇塔。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3855/icon.png",
           "is_final": true
         }
       ]
@@ -26619,6 +27038,2509 @@
           "is_final": true
         }
       ]
+    },
+    {
+      "family_id": 344,
+      "name": "小冥龙进化链",
+      "multi_form": false,
+      "base_chain_id": 344,
+      "chains": [
+        {
+          "family_id": 344,
+          "name": "小冥龙进化链",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3797,
+              "name": "小冥龙",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "初始等级+39，回合结束时等级-10，低于80级时受到伤害+40%。",
+                "name": "恶龙的奢望",
+                "skill_id": 200327
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3797/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3798,
+              "name": "冥古龙",
+              "form": null,
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3797,
+              "condition": "等级达到 40",
+              "condition_level": 40,
+              "evolution_description": "小冥龙升级到40级后进化为冥古龙。",
+              "feature": {
+                "desc": "初始等级+39，回合结束时等级-10，低于80级时受到伤害+40%。",
+                "name": "恶龙的奢望",
+                "skill_id": 200327
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3798/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3798
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3797,
+          "name": "小冥龙",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "初始等级+39，回合结束时等级-10，低于80级时受到伤害+40%。",
+            "name": "恶龙的奢望",
+            "skill_id": 200327
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3797/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3798,
+          "name": "冥古龙",
+          "form": null,
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3797,
+          "condition": "等级达到 40",
+          "condition_level": 40,
+          "evolution_description": "小冥龙升级到40级后进化为冥古龙。",
+          "feature": {
+            "desc": "初始等级+39，回合结束时等级-10，低于80级时受到伤害+40%。",
+            "name": "恶龙的奢望",
+            "skill_id": 200327
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3798/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 345,
+      "name": "地银链进化链",
+      "multi_form": false,
+      "base_chain_id": 345,
+      "chains": [
+        {
+          "family_id": 345,
+          "name": "地银链进化链",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3799,
+              "name": "地银链",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "自己每消耗1点能量，回合结束时获得魔攻+10%。",
+                "name": "银头寸",
+                "skill_id": 200329
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3799/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3800,
+              "name": "地底银鳞",
+              "form": null,
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3799,
+              "condition": "等级达到 24",
+              "condition_level": 24,
+              "evolution_description": "地银链升级到24级后进化为地底银鳞。",
+              "feature": {
+                "desc": "自己每消耗1点能量，回合结束时获得魔攻+10%。",
+                "name": "银头寸",
+                "skill_id": 200329
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3800/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3801,
+              "name": "地绡银龙",
+              "form": null,
+              "stage": 3,
+              "display_order": 3,
+              "previous_pet_id": 3800,
+              "condition": "等级达到 47",
+              "condition_level": 47,
+              "evolution_description": "地底银鳞升级到47级后进化为地绡银龙。",
+              "feature": {
+                "desc": "自己每消耗1点能量，回合结束时获得魔攻+10%。",
+                "name": "银头寸",
+                "skill_id": 200329
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3801/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3801
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3799,
+          "name": "地银链",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "自己每消耗1点能量，回合结束时获得魔攻+10%。",
+            "name": "银头寸",
+            "skill_id": 200329
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3799/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3800,
+          "name": "地底银鳞",
+          "form": null,
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3799,
+          "condition": "等级达到 24",
+          "condition_level": 24,
+          "evolution_description": "地银链升级到24级后进化为地底银鳞。",
+          "feature": {
+            "desc": "自己每消耗1点能量，回合结束时获得魔攻+10%。",
+            "name": "银头寸",
+            "skill_id": 200329
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3800/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3801,
+          "name": "地绡银龙",
+          "form": null,
+          "stage": 3,
+          "display_order": 3,
+          "previous_pet_id": 3800,
+          "condition": "等级达到 47",
+          "condition_level": 47,
+          "evolution_description": "地底银鳞升级到47级后进化为地绡银龙。",
+          "feature": {
+            "desc": "自己每消耗1点能量，回合结束时获得魔攻+10%。",
+            "name": "银头寸",
+            "skill_id": 200329
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3801/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 346,
+      "name": "沉金兽进化链",
+      "multi_form": false,
+      "base_chain_id": 346,
+      "chains": [
+        {
+          "family_id": 346,
+          "name": "沉金兽进化链",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3802,
+              "name": "沉金兽",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "自己每使用1次聚能，回合结束时获得物攻+50%。",
+                "name": "储备金",
+                "skill_id": 200330
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3802/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3803,
+              "name": "龙头金",
+              "form": null,
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3802,
+              "condition": "等级达到 27",
+              "condition_level": 27,
+              "evolution_description": "沉金兽升级到27级后进化为龙头金。",
+              "feature": {
+                "desc": "自己每使用1次聚能，回合结束时获得物攻+50%。",
+                "name": "储备金",
+                "skill_id": 200330
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3803/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3804,
+              "name": "龙嵴金脉",
+              "form": null,
+              "stage": 3,
+              "display_order": 3,
+              "previous_pet_id": 3803,
+              "condition": "等级达到 49",
+              "condition_level": 49,
+              "evolution_description": "龙头金升级到49级后进化为龙嵴金脉。",
+              "feature": {
+                "desc": "自己每使用1次聚能，回合结束时获得物攻+50%。",
+                "name": "储备金",
+                "skill_id": 200330
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3804/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3804
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3802,
+          "name": "沉金兽",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "自己每使用1次聚能，回合结束时获得物攻+50%。",
+            "name": "储备金",
+            "skill_id": 200330
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3802/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3803,
+          "name": "龙头金",
+          "form": null,
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3802,
+          "condition": "等级达到 27",
+          "condition_level": 27,
+          "evolution_description": "沉金兽升级到27级后进化为龙头金。",
+          "feature": {
+            "desc": "自己每使用1次聚能，回合结束时获得物攻+50%。",
+            "name": "储备金",
+            "skill_id": 200330
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3803/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3804,
+          "name": "龙嵴金脉",
+          "form": null,
+          "stage": 3,
+          "display_order": 3,
+          "previous_pet_id": 3803,
+          "condition": "等级达到 49",
+          "condition_level": 49,
+          "evolution_description": "龙头金升级到49级后进化为龙嵴金脉。",
+          "feature": {
+            "desc": "自己每使用1次聚能，回合结束时获得物攻+50%。",
+            "name": "储备金",
+            "skill_id": 200330
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3804/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 347,
+      "name": "乐乐鲨进化链",
+      "multi_form": true,
+      "base_chain_id": 347,
+      "chains": [
+        {
+          "family_id": 347,
+          "name": "乐乐鲨进化链（柠檬鲨分支）",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3805,
+              "name": "乐乐鲨",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "驱散1次自己的减益后，获得物攻永久+50%。（最多触发1次）",
+                "name": "换牙",
+                "skill_id": 200331
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3805/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3806,
+              "name": "阿瓦鲨",
+              "form": "柠檬鲨的样子",
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3805,
+              "condition": "等级达到 34",
+              "condition_level": 34,
+              "evolution_description": "乐乐鲨升级到34级后进化为阿瓦鲨。",
+              "feature": {
+                "desc": "驱散1次自己的减益后，获得物攻永久+50%。（最多触发1次）",
+                "name": "换牙",
+                "skill_id": 200331
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3806/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3806
+          ]
+        },
+        {
+          "family_id": 348,
+          "name": "乐乐鲨进化链（虎纹鲨分支）",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3805,
+              "name": "乐乐鲨",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "驱散1次自己的减益后，获得物攻永久+50%。（最多触发1次）",
+                "name": "换牙",
+                "skill_id": 200331
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3805/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3807,
+              "name": "阿瓦鲨",
+              "form": "虎纹鲨的样子",
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3805,
+              "condition": "等级达到 34",
+              "condition_level": 34,
+              "evolution_description": "乐乐鲨升级到34级后进化为阿瓦鲨。",
+              "feature": {
+                "desc": "驱散1次自己的减益后，获得物攻永久+50%。（最多触发1次）",
+                "name": "换牙",
+                "skill_id": 200331
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3807/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3807
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3805,
+          "name": "乐乐鲨",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "驱散1次自己的减益后，获得物攻永久+50%。（最多触发1次）",
+            "name": "换牙",
+            "skill_id": 200331
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3805/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3806,
+          "name": "阿瓦鲨",
+          "form": "柠檬鲨的样子",
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3805,
+          "condition": "等级达到 34",
+          "condition_level": 34,
+          "evolution_description": "乐乐鲨升级到34级后进化为阿瓦鲨。",
+          "feature": {
+            "desc": "驱散1次自己的减益后，获得物攻永久+50%。（最多触发1次）",
+            "name": "换牙",
+            "skill_id": 200331
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3806/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 349,
+      "name": "蛋包蛋进化链",
+      "multi_form": false,
+      "base_chain_id": 349,
+      "chains": [
+        {
+          "family_id": 349,
+          "name": "蛋包蛋进化链",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3808,
+              "name": "蛋包蛋",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "队伍中存在被萌化的精灵时，自己获得双防+50%。",
+                "name": "护犊",
+                "skill_id": 200332
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3808/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3809,
+              "name": "鸡麻麻",
+              "form": null,
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3808,
+              "condition": "等级达到 36",
+              "condition_level": 36,
+              "evolution_description": "蛋包蛋升级到36级后进化为鸡麻麻。",
+              "feature": {
+                "desc": "队伍中存在被萌化的精灵时，自己获得双防+50%。",
+                "name": "护犊",
+                "skill_id": 200332
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3809/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3809
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3808,
+          "name": "蛋包蛋",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "队伍中存在被萌化的精灵时，自己获得双防+50%。",
+            "name": "护犊",
+            "skill_id": 200332
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3808/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3809,
+          "name": "鸡麻麻",
+          "form": null,
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3808,
+          "condition": "等级达到 36",
+          "condition_level": 36,
+          "evolution_description": "蛋包蛋升级到36级后进化为鸡麻麻。",
+          "feature": {
+            "desc": "队伍中存在被萌化的精灵时，自己获得双防+50%。",
+            "name": "护犊",
+            "skill_id": 200332
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3809/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 350,
+      "name": "蟹蟹椰进化链",
+      "multi_form": false,
+      "base_chain_id": 350,
+      "chains": [
+        {
+          "family_id": 350,
+          "name": "蟹蟹椰进化链",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3810,
+              "name": "蟹蟹椰",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "使用​水系​技​能​后，​下​次​行动草系​技​能​能​耗-​3。",
+                "name": "沙滩节拍",
+                "skill_id": 200333
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3810/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3811,
+              "name": "沙咔蟹",
+              "form": null,
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3810,
+              "condition": "等级达到 35",
+              "condition_level": 35,
+              "evolution_description": "蟹蟹椰升级到35级后进化为沙咔蟹。",
+              "feature": {
+                "desc": "使用​水系​技​能​后，​下​次​行动草系​技​能​能​耗-​3。",
+                "name": "沙滩节拍",
+                "skill_id": 200333
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3811/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3811
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3810,
+          "name": "蟹蟹椰",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "使用​水系​技​能​后，​下​次​行动草系​技​能​能​耗-​3。",
+            "name": "沙滩节拍",
+            "skill_id": 200333
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3810/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3811,
+          "name": "沙咔蟹",
+          "form": null,
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3810,
+          "condition": "等级达到 35",
+          "condition_level": 35,
+          "evolution_description": "蟹蟹椰升级到35级后进化为沙咔蟹。",
+          "feature": {
+            "desc": "使用​水系​技​能​后，​下​次​行动草系​技​能​能​耗-​3。",
+            "name": "沙滩节拍",
+            "skill_id": 200333
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3811/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 351,
+      "name": "鲸羽进化链",
+      "multi_form": false,
+      "base_chain_id": 351,
+      "chains": [
+        {
+          "family_id": 351,
+          "name": "鲸羽进化链",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3812,
+              "name": "鲸羽",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "在场时，若天气为暴风雪，回合结束敌方不会获得冻结，而是获得3层星陨印记。",
+                "name": "环天顶弧",
+                "skill_id": 200334
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3812/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3813,
+              "name": "圆环鲸羽",
+              "form": null,
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3812,
+              "condition": "等级达到 35",
+              "condition_level": 35,
+              "evolution_description": "鲸羽升级到35级后进化为圆环鲸羽。",
+              "feature": {
+                "desc": "在场时，若天气为暴风雪，回合结束敌方不会获得冻结，而是获得3层星陨印记。",
+                "name": "环天顶弧",
+                "skill_id": 200334
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3813/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3813
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3812,
+          "name": "鲸羽",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "在场时，若天气为暴风雪，回合结束敌方不会获得冻结，而是获得3层星陨印记。",
+            "name": "环天顶弧",
+            "skill_id": 200334
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3812/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3813,
+          "name": "圆环鲸羽",
+          "form": null,
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3812,
+          "condition": "等级达到 35",
+          "condition_level": 35,
+          "evolution_description": "鲸羽升级到35级后进化为圆环鲸羽。",
+          "feature": {
+            "desc": "在场时，若天气为暴风雪，回合结束敌方不会获得冻结，而是获得3层星陨印记。",
+            "name": "环天顶弧",
+            "skill_id": 200334
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3813/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 352,
+      "name": "豆粒鹅进化链",
+      "multi_form": false,
+      "base_chain_id": 352,
+      "chains": [
+        {
+          "family_id": 352,
+          "name": "豆粒鹅进化链",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3814,
+              "name": "豆粒鹅",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "使敌方获得10层冻结后，天气变为暴风雪，持续5回合。（最多触发1次）",
+                "name": "高吹雪",
+                "skill_id": 200335
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3814/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3815,
+              "name": "刨雪鹅",
+              "form": null,
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3814,
+              "condition": "等级达到 35",
+              "condition_level": 35,
+              "evolution_description": "豆粒鹅升级到35级后进化为刨雪鹅。",
+              "feature": {
+                "desc": "使敌方获得10层冻结后，天气变为暴风雪，持续5回合。（最多触发1次）",
+                "name": "高吹雪",
+                "skill_id": 200335
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3815/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3815
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3814,
+          "name": "豆粒鹅",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "使敌方获得10层冻结后，天气变为暴风雪，持续5回合。（最多触发1次）",
+            "name": "高吹雪",
+            "skill_id": 200335
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3814/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3815,
+          "name": "刨雪鹅",
+          "form": null,
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3814,
+          "condition": "等级达到 35",
+          "condition_level": 35,
+          "evolution_description": "豆粒鹅升级到35级后进化为刨雪鹅。",
+          "feature": {
+            "desc": "使敌方获得10层冻结后，天气变为暴风雪，持续5回合。（最多触发1次）",
+            "name": "高吹雪",
+            "skill_id": 200335
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3815/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 353,
+      "name": "西瓜虫进化链",
+      "multi_form": false,
+      "base_chain_id": 353,
+      "chains": [
+        {
+          "family_id": 353,
+          "name": "西瓜虫进化链",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3816,
+              "name": "西瓜虫",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "草系技能获得1次随机奉献，虫系技能使敌方获得1层寄生。",
+                "name": "虫草多糖",
+                "skill_id": 200336
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3816/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3817,
+              "name": "冬虫夏瓜",
+              "form": null,
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3816,
+              "condition": "等级达到 33",
+              "condition_level": 33,
+              "evolution_description": "西瓜虫升级到33级后进化为冬虫夏瓜。",
+              "feature": {
+                "desc": "草系技能获得1次随机奉献，虫系技能使敌方获得1层寄生。",
+                "name": "虫草多糖",
+                "skill_id": 200336
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3817/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3817
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3816,
+          "name": "西瓜虫",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "草系技能获得1次随机奉献，虫系技能使敌方获得1层寄生。",
+            "name": "虫草多糖",
+            "skill_id": 200336
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3816/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3817,
+          "name": "冬虫夏瓜",
+          "form": null,
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3816,
+          "condition": "等级达到 33",
+          "condition_level": 33,
+          "evolution_description": "西瓜虫升级到33级后进化为冬虫夏瓜。",
+          "feature": {
+            "desc": "草系技能获得1次随机奉献，虫系技能使敌方获得1层寄生。",
+            "name": "虫草多糖",
+            "skill_id": 200336
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3817/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 354,
+      "name": "小剪影进化链",
+      "multi_form": false,
+      "base_chain_id": 354,
+      "chains": [
+        {
+          "family_id": 354,
+          "name": "小剪影进化链",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3818,
+              "name": "小剪影",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "敌方精灵离场时，自己获得技能威力+20。",
+                "name": "剪影",
+                "skill_id": 200337
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3818/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3819,
+              "name": "影子剪纸",
+              "form": null,
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3818,
+              "condition": "等级达到 32",
+              "condition_level": 32,
+              "evolution_description": "小剪影升级到32级后进化为影子剪纸。",
+              "feature": {
+                "desc": "敌方精灵离场时，自己获得技能威力+20。",
+                "name": "剪影",
+                "skill_id": 200337
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3819/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3819
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3818,
+          "name": "小剪影",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "敌方精灵离场时，自己获得技能威力+20。",
+            "name": "剪影",
+            "skill_id": 200337
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3818/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3819,
+          "name": "影子剪纸",
+          "form": null,
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3818,
+          "condition": "等级达到 32",
+          "condition_level": 32,
+          "evolution_description": "小剪影升级到32级后进化为影子剪纸。",
+          "feature": {
+            "desc": "敌方精灵离场时，自己获得技能威力+20。",
+            "name": "剪影",
+            "skill_id": 200337
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3819/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 355,
+      "name": "滴溜豚进化链",
+      "multi_form": false,
+      "base_chain_id": 355,
+      "chains": [
+        {
+          "family_id": 355,
+          "name": "滴溜豚进化链",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3820,
+              "name": "滴溜豚",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "入场时随机获得1~6点，在场时双方根据点数获得不同效果。",
+                "name": "游戏的本质",
+                "skill_id": 200340
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3820/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3821,
+              "name": "滴廿豚",
+              "form": null,
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3820,
+              "condition": "等级达到 36",
+              "condition_level": 36,
+              "evolution_description": "滴溜豚升级到36级后进化为滴廿豚。",
+              "feature": {
+                "desc": "入场时随机获得1~20点，在场时双方根据点数获得不同效果。",
+                "name": "游戏的本质",
+                "skill_id": 200338
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3821/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3821
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3820,
+          "name": "滴溜豚",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "入场时随机获得1~6点，在场时双方根据点数获得不同效果。",
+            "name": "游戏的本质",
+            "skill_id": 200340
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3820/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3821,
+          "name": "滴廿豚",
+          "form": null,
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3820,
+          "condition": "等级达到 36",
+          "condition_level": 36,
+          "evolution_description": "滴溜豚升级到36级后进化为滴廿豚。",
+          "feature": {
+            "desc": "入场时随机获得1~20点，在场时双方根据点数获得不同效果。",
+            "name": "游戏的本质",
+            "skill_id": 200338
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3821/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 356,
+      "name": "呆呆铃进化链",
+      "multi_form": false,
+      "base_chain_id": 356,
+      "chains": [
+        {
+          "family_id": 356,
+          "name": "呆呆铃进化链",
+          "form": null,
+          "members": [
+            {
+              "pet_id": 3822,
+              "name": "呆呆铃",
+              "form": null,
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "天气为霞光梦境时，回合结束时敌方获得3层寄生。",
+                "name": "幸福铃音",
+                "skill_id": 200339
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3822/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3823,
+              "name": "跳跳铃",
+              "form": null,
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3822,
+              "condition": "等级达到 21",
+              "condition_level": 21,
+              "evolution_description": "呆呆铃升级到21级后进化为跳跳铃。",
+              "feature": {
+                "desc": "天气为霞光梦境时，回合结束时敌方获得3层寄生。",
+                "name": "幸福铃音",
+                "skill_id": 200339
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3823/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3824,
+              "name": "铃兰夫人",
+              "form": null,
+              "stage": 3,
+              "display_order": 3,
+              "previous_pet_id": 3823,
+              "condition": "等级达到 38",
+              "condition_level": 38,
+              "evolution_description": "跳跳铃升级到38级后进化为铃兰夫人。",
+              "feature": {
+                "desc": "天气为霞光梦境时，回合结束时敌方获得3层寄生。",
+                "name": "幸福铃音",
+                "skill_id": 200339
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3824/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3824
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3822,
+          "name": "呆呆铃",
+          "form": null,
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "天气为霞光梦境时，回合结束时敌方获得3层寄生。",
+            "name": "幸福铃音",
+            "skill_id": 200339
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3822/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3823,
+          "name": "跳跳铃",
+          "form": null,
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3822,
+          "condition": "等级达到 21",
+          "condition_level": 21,
+          "evolution_description": "呆呆铃升级到21级后进化为跳跳铃。",
+          "feature": {
+            "desc": "天气为霞光梦境时，回合结束时敌方获得3层寄生。",
+            "name": "幸福铃音",
+            "skill_id": 200339
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3823/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3824,
+          "name": "铃兰夫人",
+          "form": null,
+          "stage": 3,
+          "display_order": 3,
+          "previous_pet_id": 3823,
+          "condition": "等级达到 38",
+          "condition_level": 38,
+          "evolution_description": "跳跳铃升级到38级后进化为铃兰夫人。",
+          "feature": {
+            "desc": "天气为霞光梦境时，回合结束时敌方获得3层寄生。",
+            "name": "幸福铃音",
+            "skill_id": 200339
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3824/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 359,
+      "name": "绿草精灵进化链",
+      "multi_form": false,
+      "base_chain_id": 359,
+      "chains": [
+        {
+          "family_id": 359,
+          "name": "绿草精灵进化链（幻鸩园丁的样子）",
+          "form": "幻鸩园丁的样子",
+          "members": [
+            {
+              "pet_id": 3829,
+              "name": "绿草精灵",
+              "form": "幻鸩园丁的样子",
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3829/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3830,
+              "name": "魔草巫灵",
+              "form": "幻鸩园丁的样子",
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3829,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "绿草精灵升级到42级后进化为魔草巫灵。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3830/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3775,
+              "name": "布灵",
+              "form": null,
+              "stage": 1,
+              "display_order": 3,
+              "previous_pet_id": 3829,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3775/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3843,
+              "name": "矮脚爬爬",
+              "form": "毒之花的样子",
+              "stage": 1,
+              "display_order": 10,
+              "previous_pet_id": 3829,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3843/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3854,
+              "name": "缇塔",
+              "form": "星币VIII的样子",
+              "stage": 1,
+              "display_order": 15,
+              "previous_pet_id": 3829,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3854/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3776,
+              "name": "布灵布灵",
+              "form": null,
+              "stage": 2,
+              "display_order": 21,
+              "previous_pet_id": 3775,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "布灵升级到42级后进化为布灵布灵。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3836,
+              "name": "记忆石",
+              "form": "毒崇拜的样子",
+              "stage": 1,
+              "display_order": 27,
+              "previous_pet_id": 3830,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "魔草巫灵升级到42级后进化为记忆石。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3836/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3844,
+              "name": "恶魔红钻",
+              "form": "毒之花的样子",
+              "stage": 2,
+              "display_order": 32,
+              "previous_pet_id": 3843,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "矮脚爬爬升级到42级后进化为恶魔红钻。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3844/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3855,
+              "name": "声波缇塔",
+              "form": "星币VIII的样子",
+              "stage": 2,
+              "display_order": 38,
+              "previous_pet_id": 3854,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "缇塔升级到42级后进化为声波缇塔。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3855/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3776,
+            3836,
+            3844,
+            3855
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3829,
+          "name": "绿草精灵",
+          "form": "幻鸩园丁的样子",
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3829/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3830,
+          "name": "魔草巫灵",
+          "form": "幻鸩园丁的样子",
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3829,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "绿草精灵升级到42级后进化为魔草巫灵。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3830/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3775,
+          "name": "布灵",
+          "form": null,
+          "stage": 1,
+          "display_order": 3,
+          "previous_pet_id": 3829,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3775/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3843,
+          "name": "矮脚爬爬",
+          "form": "毒之花的样子",
+          "stage": 1,
+          "display_order": 10,
+          "previous_pet_id": 3829,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3843/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3854,
+          "name": "缇塔",
+          "form": "星币VIII的样子",
+          "stage": 1,
+          "display_order": 15,
+          "previous_pet_id": 3829,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3854/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3776,
+          "name": "布灵布灵",
+          "form": null,
+          "stage": 2,
+          "display_order": 21,
+          "previous_pet_id": 3775,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "布灵升级到42级后进化为布灵布灵。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3836,
+          "name": "记忆石",
+          "form": "毒崇拜的样子",
+          "stage": 1,
+          "display_order": 27,
+          "previous_pet_id": 3830,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "魔草巫灵升级到42级后进化为记忆石。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3836/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3844,
+          "name": "恶魔红钻",
+          "form": "毒之花的样子",
+          "stage": 2,
+          "display_order": 32,
+          "previous_pet_id": 3843,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "矮脚爬爬升级到42级后进化为恶魔红钻。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3844/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3855,
+          "name": "声波缇塔",
+          "form": "星币VIII的样子",
+          "stage": 2,
+          "display_order": 38,
+          "previous_pet_id": 3854,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "缇塔升级到42级后进化为声波缇塔。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3855/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 363,
+      "name": "记忆石进化链",
+      "multi_form": false,
+      "base_chain_id": 363,
+      "chains": [
+        {
+          "family_id": 363,
+          "name": "记忆石进化链（毒崇拜的样子）",
+          "form": "毒崇拜的样子",
+          "members": [
+            {
+              "pet_id": 3836,
+              "name": "记忆石",
+              "form": "毒崇拜的样子",
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3836/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3776,
+              "name": "布灵布灵",
+              "form": null,
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3775,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "布灵升级到42级后进化为布灵布灵。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3830,
+              "name": "魔草巫灵",
+              "form": "幻鸩园丁的样子",
+              "stage": 2,
+              "display_order": 5,
+              "previous_pet_id": 3829,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "绿草精灵升级到42级后进化为魔草巫灵。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3830/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3844,
+              "name": "恶魔红钻",
+              "form": "毒之花的样子",
+              "stage": 2,
+              "display_order": 13,
+              "previous_pet_id": 3843,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "矮脚爬爬升级到42级后进化为恶魔红钻。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3844/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3855,
+              "name": "声波缇塔",
+              "form": "星币VIII的样子",
+              "stage": 2,
+              "display_order": 19,
+              "previous_pet_id": 3854,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "缇塔升级到42级后进化为声波缇塔。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3855/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3836,
+            3776,
+            3830,
+            3844,
+            3855
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3836,
+          "name": "记忆石",
+          "form": "毒崇拜的样子",
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3836/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3776,
+          "name": "布灵布灵",
+          "form": null,
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3775,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "布灵升级到42级后进化为布灵布灵。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3830,
+          "name": "魔草巫灵",
+          "form": "幻鸩园丁的样子",
+          "stage": 2,
+          "display_order": 5,
+          "previous_pet_id": 3829,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "绿草精灵升级到42级后进化为魔草巫灵。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3830/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3844,
+          "name": "恶魔红钻",
+          "form": "毒之花的样子",
+          "stage": 2,
+          "display_order": 13,
+          "previous_pet_id": 3843,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "矮脚爬爬升级到42级后进化为恶魔红钻。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3844/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3855,
+          "name": "声波缇塔",
+          "form": "星币VIII的样子",
+          "stage": 2,
+          "display_order": 19,
+          "previous_pet_id": 3854,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "缇塔升级到42级后进化为声波缇塔。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3855/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 368,
+      "name": "矮脚爬爬进化链",
+      "multi_form": false,
+      "base_chain_id": 368,
+      "chains": [
+        {
+          "family_id": 368,
+          "name": "矮脚爬爬进化链（毒之花的样子）",
+          "form": "毒之花的样子",
+          "members": [
+            {
+              "pet_id": 3843,
+              "name": "矮脚爬爬",
+              "form": "毒之花的样子",
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3843/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3844,
+              "name": "恶魔红钻",
+              "form": "毒之花的样子",
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3843,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "矮脚爬爬升级到42级后进化为恶魔红钻。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3844/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3775,
+              "name": "布灵",
+              "form": null,
+              "stage": 1,
+              "display_order": 3,
+              "previous_pet_id": 3843,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3775/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3829,
+              "name": "绿草精灵",
+              "form": "幻鸩园丁的样子",
+              "stage": 1,
+              "display_order": 6,
+              "previous_pet_id": 3843,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3829/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3854,
+              "name": "缇塔",
+              "form": "星币VIII的样子",
+              "stage": 1,
+              "display_order": 15,
+              "previous_pet_id": 3843,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3854/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3776,
+              "name": "布灵布灵",
+              "form": null,
+              "stage": 2,
+              "display_order": 21,
+              "previous_pet_id": 3775,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "布灵升级到42级后进化为布灵布灵。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3830,
+              "name": "魔草巫灵",
+              "form": "幻鸩园丁的样子",
+              "stage": 2,
+              "display_order": 24,
+              "previous_pet_id": 3829,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "绿草精灵升级到42级后进化为魔草巫灵。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3830/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3836,
+              "name": "记忆石",
+              "form": "毒崇拜的样子",
+              "stage": 1,
+              "display_order": 28,
+              "previous_pet_id": 3844,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "恶魔红钻升级到42级后进化为记忆石。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3836/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3855,
+              "name": "声波缇塔",
+              "form": "星币VIII的样子",
+              "stage": 2,
+              "display_order": 38,
+              "previous_pet_id": 3854,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "缇塔升级到42级后进化为声波缇塔。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3855/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3776,
+            3830,
+            3836,
+            3855
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3843,
+          "name": "矮脚爬爬",
+          "form": "毒之花的样子",
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3843/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3844,
+          "name": "恶魔红钻",
+          "form": "毒之花的样子",
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3843,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "矮脚爬爬升级到42级后进化为恶魔红钻。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3844/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3775,
+          "name": "布灵",
+          "form": null,
+          "stage": 1,
+          "display_order": 3,
+          "previous_pet_id": 3843,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3775/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3829,
+          "name": "绿草精灵",
+          "form": "幻鸩园丁的样子",
+          "stage": 1,
+          "display_order": 6,
+          "previous_pet_id": 3843,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3829/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3854,
+          "name": "缇塔",
+          "form": "星币VIII的样子",
+          "stage": 1,
+          "display_order": 15,
+          "previous_pet_id": 3843,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3854/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3776,
+          "name": "布灵布灵",
+          "form": null,
+          "stage": 2,
+          "display_order": 21,
+          "previous_pet_id": 3775,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "布灵升级到42级后进化为布灵布灵。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3830,
+          "name": "魔草巫灵",
+          "form": "幻鸩园丁的样子",
+          "stage": 2,
+          "display_order": 24,
+          "previous_pet_id": 3829,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "绿草精灵升级到42级后进化为魔草巫灵。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3830/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3836,
+          "name": "记忆石",
+          "form": "毒崇拜的样子",
+          "stage": 1,
+          "display_order": 28,
+          "previous_pet_id": 3844,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "恶魔红钻升级到42级后进化为记忆石。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3836/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3855,
+          "name": "声波缇塔",
+          "form": "星币VIII的样子",
+          "stage": 2,
+          "display_order": 38,
+          "previous_pet_id": 3854,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "缇塔升级到42级后进化为声波缇塔。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3855/icon.png",
+          "is_final": true
+        }
+      ]
+    },
+    {
+      "family_id": 374,
+      "name": "缇塔进化链",
+      "multi_form": false,
+      "base_chain_id": 374,
+      "chains": [
+        {
+          "family_id": 374,
+          "name": "缇塔进化链（星币VIII的样子）",
+          "form": "星币VIII的样子",
+          "members": [
+            {
+              "pet_id": 3854,
+              "name": "缇塔",
+              "form": "星币VIII的样子",
+              "stage": 1,
+              "display_order": 1,
+              "previous_pet_id": null,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3854/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3855,
+              "name": "声波缇塔",
+              "form": "星币VIII的样子",
+              "stage": 2,
+              "display_order": 2,
+              "previous_pet_id": 3854,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "缇塔升级到42级后进化为声波缇塔。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3855/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3775,
+              "name": "布灵",
+              "form": null,
+              "stage": 1,
+              "display_order": 3,
+              "previous_pet_id": 3854,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3775/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3829,
+              "name": "绿草精灵",
+              "form": "幻鸩园丁的样子",
+              "stage": 1,
+              "display_order": 6,
+              "previous_pet_id": 3854,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3829/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3843,
+              "name": "矮脚爬爬",
+              "form": "毒之花的样子",
+              "stage": 1,
+              "display_order": 11,
+              "previous_pet_id": 3854,
+              "condition": null,
+              "condition_level": null,
+              "evolution_description": null,
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3843/icon.png",
+              "is_final": false
+            },
+            {
+              "pet_id": 3776,
+              "name": "布灵布灵",
+              "form": null,
+              "stage": 2,
+              "display_order": 21,
+              "previous_pet_id": 3775,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "布灵升级到42级后进化为布灵布灵。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3830,
+              "name": "魔草巫灵",
+              "form": "幻鸩园丁的样子",
+              "stage": 2,
+              "display_order": 24,
+              "previous_pet_id": 3829,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "绿草精灵升级到42级后进化为魔草巫灵。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3830/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3836,
+              "name": "记忆石",
+              "form": "毒崇拜的样子",
+              "stage": 1,
+              "display_order": 28,
+              "previous_pet_id": 3855,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "声波缇塔升级到42级后进化为记忆石。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3836/icon.png",
+              "is_final": true
+            },
+            {
+              "pet_id": 3844,
+              "name": "恶魔红钻",
+              "form": "毒之花的样子",
+              "stage": 2,
+              "display_order": 33,
+              "previous_pet_id": 3843,
+              "condition": "等级达到 42",
+              "condition_level": 42,
+              "evolution_description": "矮脚爬爬升级到42级后进化为恶魔红钻。",
+              "feature": {
+                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+                "name": "旧玩具",
+                "skill_id": 200325
+              },
+              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3844/icon.png",
+              "is_final": true
+            }
+          ],
+          "final_pet_ids": [
+            3776,
+            3830,
+            3836,
+            3844
+          ]
+        }
+      ],
+      "members": [
+        {
+          "pet_id": 3854,
+          "name": "缇塔",
+          "form": "星币VIII的样子",
+          "stage": 1,
+          "display_order": 1,
+          "previous_pet_id": null,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3854/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3855,
+          "name": "声波缇塔",
+          "form": "星币VIII的样子",
+          "stage": 2,
+          "display_order": 2,
+          "previous_pet_id": 3854,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "缇塔升级到42级后进化为声波缇塔。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3855/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3775,
+          "name": "布灵",
+          "form": null,
+          "stage": 1,
+          "display_order": 3,
+          "previous_pet_id": 3854,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3775/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3829,
+          "name": "绿草精灵",
+          "form": "幻鸩园丁的样子",
+          "stage": 1,
+          "display_order": 6,
+          "previous_pet_id": 3854,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3829/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3843,
+          "name": "矮脚爬爬",
+          "form": "毒之花的样子",
+          "stage": 1,
+          "display_order": 11,
+          "previous_pet_id": 3854,
+          "condition": null,
+          "condition_level": null,
+          "evolution_description": null,
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3843/icon.png",
+          "is_final": false
+        },
+        {
+          "pet_id": 3776,
+          "name": "布灵布灵",
+          "form": null,
+          "stage": 2,
+          "display_order": 21,
+          "previous_pet_id": 3775,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "布灵升级到42级后进化为布灵布灵。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3830,
+          "name": "魔草巫灵",
+          "form": "幻鸩园丁的样子",
+          "stage": 2,
+          "display_order": 24,
+          "previous_pet_id": 3829,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "绿草精灵升级到42级后进化为魔草巫灵。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3830/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3836,
+          "name": "记忆石",
+          "form": "毒崇拜的样子",
+          "stage": 1,
+          "display_order": 28,
+          "previous_pet_id": 3855,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "声波缇塔升级到42级后进化为记忆石。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3836/icon.png",
+          "is_final": true
+        },
+        {
+          "pet_id": 3844,
+          "name": "恶魔红钻",
+          "form": "毒之花的样子",
+          "stage": 2,
+          "display_order": 33,
+          "previous_pet_id": 3843,
+          "condition": "等级达到 42",
+          "condition_level": 42,
+          "evolution_description": "矮脚爬爬升级到42级后进化为恶魔红钻。",
+          "feature": {
+            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
+            "name": "旧玩具",
+            "skill_id": 200325
+          },
+          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3844/icon.png",
+          "is_final": true
+        }
+      ]
     }
   ],
   "pet_family_map": {
@@ -26770,6 +29692,7 @@
     "3165": 62,
     "3166": 62,
     "3167": 62,
+    "3168": 63,
     "3170": 64,
     "3171": 64,
     "3172": 65,
@@ -27182,6 +30105,41 @@
     "3784": 335,
     "3785": 335,
     "3796": 336,
+    "3797": 344,
+    "3798": 344,
+    "3799": 345,
+    "3800": 345,
+    "3801": 345,
+    "3802": 346,
+    "3803": 346,
+    "3804": 346,
+    "3805": 347,
+    "3806": 347,
+    "3807": 347,
+    "3808": 349,
+    "3809": 349,
+    "3810": 350,
+    "3811": 350,
+    "3812": 351,
+    "3813": 351,
+    "3814": 352,
+    "3815": 352,
+    "3816": 353,
+    "3817": 353,
+    "3818": 354,
+    "3819": 354,
+    "3820": 355,
+    "3821": 355,
+    "3822": 356,
+    "3823": 356,
+    "3824": 356,
+    "3829": 359,
+    "3830": 359,
+    "3836": 363,
+    "3843": 368,
+    "3844": 368,
+    "3854": 374,
+    "3855": 374,
     "3870": 32,
     "3871": 32,
     "3872": 183,
@@ -27258,6 +30216,9 @@
     "5063": 39,
     "5064": 234,
     "5065": 234,
+    "5066": 168,
+    "5067": 99,
+    "5068": 63,
     "5075": 32
   },
   "pet_chain_map": {
@@ -27409,6 +30370,7 @@
     "3165": 62,
     "3166": 62,
     "3167": 62,
+    "3168": 63,
     "3170": 64,
     "3171": 64,
     "3172": 65,
@@ -27821,6 +30783,41 @@
     "3784": 335,
     "3785": 335,
     "3796": 336,
+    "3797": 344,
+    "3798": 344,
+    "3799": 345,
+    "3800": 345,
+    "3801": 345,
+    "3802": 346,
+    "3803": 346,
+    "3804": 346,
+    "3805": 347,
+    "3806": 347,
+    "3807": 347,
+    "3808": 349,
+    "3809": 349,
+    "3810": 350,
+    "3811": 350,
+    "3812": 351,
+    "3813": 351,
+    "3814": 352,
+    "3815": 352,
+    "3816": 353,
+    "3817": 353,
+    "3818": 354,
+    "3819": 354,
+    "3820": 355,
+    "3821": 355,
+    "3822": 356,
+    "3823": 356,
+    "3824": 356,
+    "3829": 359,
+    "3830": 359,
+    "3836": 363,
+    "3843": 368,
+    "3844": 368,
+    "3854": 374,
+    "3855": 374,
     "3870": 385,
     "3871": 385,
     "3872": 386,
@@ -27897,6 +30894,9 @@
     "5063": 39,
     "5064": 234,
     "5065": 235,
+    "5066": 168,
+    "5067": 99,
+    "5068": 63,
     "5075": 385
   },
   "backfilled_family": {
@@ -27933,6 +30933,65 @@
     "3375": [
       131,
       248
+    ],
+    "3775": [
+      328,
+      359,
+      368,
+      374
+    ],
+    "3776": [
+      328,
+      359,
+      363,
+      368,
+      374
+    ],
+    "3829": [
+      328,
+      359,
+      368,
+      374
+    ],
+    "3830": [
+      328,
+      359,
+      363,
+      368,
+      374
+    ],
+    "3836": [
+      328,
+      359,
+      363,
+      368,
+      374
+    ],
+    "3843": [
+      328,
+      359,
+      368,
+      374
+    ],
+    "3844": [
+      328,
+      359,
+      363,
+      368,
+      374
+    ],
+    "3854": [
+      328,
+      359,
+      368,
+      374
+    ],
+    "3855": [
+      328,
+      359,
+      363,
+      368,
+      374
     ],
     "5013": [
       49,
@@ -28000,6 +31059,7 @@
     3156,
     3157,
     3167,
+    3168,
     3171,
     3174,
     3177,
@@ -28200,6 +31260,23 @@
     3777,
     3785,
     3796,
+    3798,
+    3801,
+    3804,
+    3806,
+    3807,
+    3809,
+    3811,
+    3813,
+    3815,
+    3817,
+    3819,
+    3821,
+    3824,
+    3830,
+    3836,
+    3844,
+    3855,
     3871,
     3872,
     3874,
