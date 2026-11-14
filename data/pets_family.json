@@ -1,18 +1,18 @@
 {
   "version": 2,
   "source": "data/pets_family_raw.json (family extracted)",
-  "updatetime": "2026-11-06",
+  "updatetime": "2026-11-14",
   "stats": {
-    "families": 211,
-    "chains": 280,
+    "families": 205,
+    "chains": 274,
     "multi_form_families": 37,
-    "pets_with_family": 669,
-    "backfilled": 24,
+    "pets_with_family": 665,
+    "backfilled": 0,
     "pets_without_family": 0,
-    "pets_total": 693,
-    "family_conflicts": 6,
-    "final_forms": 275,
-    "chains_multi_final": 13
+    "pets_total": 665,
+    "family_conflicts": 0,
+    "final_forms": 274,
+    "chains_multi_final": 0
   },
   "families": [
     {
@@ -85,7 +85,7 @@
               "name": "圣水守护",
               "form": null,
               "stage": 3,
-              "display_order": 5,
+              "display_order": 4,
               "previous_pet_id": 3005,
               "condition": "首领化",
               "condition_level": null,
@@ -164,7 +164,7 @@
           "name": "圣水守护",
           "form": null,
           "stage": 3,
-          "display_order": 5,
+          "display_order": 4,
           "previous_pet_id": 3005,
           "condition": "首领化",
           "condition_level": null,
@@ -249,7 +249,7 @@
               "name": "烈火战神",
               "form": null,
               "stage": 3,
-              "display_order": 5,
+              "display_order": 4,
               "previous_pet_id": 3006,
               "condition": "首领化",
               "condition_level": null,
@@ -328,7 +328,7 @@
           "name": "烈火战神",
           "form": null,
           "stage": 3,
-          "display_order": 5,
+          "display_order": 4,
           "previous_pet_id": 3006,
           "condition": "首领化",
           "condition_level": null,
@@ -613,7 +613,7 @@
               "name": "叶冕魔力猫",
               "form": null,
               "stage": 3,
-              "display_order": 5,
+              "display_order": 4,
               "previous_pet_id": 3007,
               "condition": "首领化",
               "condition_level": null,
@@ -631,7 +631,7 @@
               "name": "武斗酷猫",
               "form": null,
               "stage": 3,
-              "display_order": 6,
+              "display_order": 5,
               "previous_pet_id": 3007,
               "condition": "首领化",
               "condition_level": null,
@@ -710,7 +710,7 @@
           "name": "叶冕魔力猫",
           "form": null,
           "stage": 3,
-          "display_order": 5,
+          "display_order": 4,
           "previous_pet_id": 3007,
           "condition": "首领化",
           "condition_level": null,
@@ -728,7 +728,7 @@
           "name": "武斗酷猫",
           "form": null,
           "stage": 3,
-          "display_order": 6,
+          "display_order": 5,
           "previous_pet_id": 3007,
           "condition": "首领化",
           "condition_level": null,
@@ -887,7 +887,7 @@
               "name": "恶魔男爵",
               "form": null,
               "stage": 2,
-              "display_order": 4,
+              "display_order": 3,
               "previous_pet_id": 3039,
               "condition": "首领化",
               "condition_level": null,
@@ -948,7 +948,7 @@
           "name": "恶魔男爵",
           "form": null,
           "stage": 2,
-          "display_order": 4,
+          "display_order": 3,
           "previous_pet_id": 3039,
           "condition": "首领化",
           "condition_level": null,
@@ -4082,7 +4082,7 @@
         {
           "family_id": 27,
           "name": "小灵面进化链（睁眼的样子）",
-          "form": null,
+          "form": "睁眼的样子",
           "members": [
             {
               "pet_id": 3060,
@@ -4146,7 +4146,7 @@
         {
           "family_id": 217,
           "name": "小灵面进化链（闭眼的样子）",
-          "form": null,
+          "form": "闭眼的样子",
           "members": [
             {
               "pet_id": 3060,
@@ -4329,24 +4329,6 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5002/icon.png",
               "is_final": false
-            },
-            {
-              "pet_id": 4076,
-              "name": "伊里斯",
-              "form": "首领形态",
-              "stage": 1,
-              "display_order": 4,
-              "previous_pet_id": 3063,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "额外获得三个未携带的随机技能，且非光系技能威力+25%。",
-                "name": "夺目",
-                "skill_id": 280009
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/4076/icon.png",
-              "is_final": false
             }
           ],
           "final_pet_ids": [
@@ -4408,24 +4390,6 @@
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5002/icon.png",
           "is_final": false
-        },
-        {
-          "pet_id": 4076,
-          "name": "伊里斯",
-          "form": "首领形态",
-          "stage": 1,
-          "display_order": 4,
-          "previous_pet_id": 3063,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "额外获得三个未携带的随机技能，且非光系技能威力+25%。",
-            "name": "夺目",
-            "skill_id": 280009
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/4076/icon.png",
-          "is_final": false
         }
       ]
     },
@@ -4475,29 +4439,10 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5019/icon.png",
               "is_final": false
-            },
-            {
-              "pet_id": 3777,
-              "name": "幽影树",
-              "form": "突变的样子",
-              "stage": 1,
-              "display_order": 3,
-              "previous_pet_id": 3064,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "入场时偷取敌方场上所有精灵2能量。",
-                "name": "小偷小摸",
-                "skill_id": 200155
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3777/icon.png",
-              "is_final": true
             }
           ],
           "final_pet_ids": [
-            3064,
-            3777
+            3064
           ]
         }
       ],
@@ -4537,24 +4482,6 @@
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5019/icon.png",
           "is_final": false
-        },
-        {
-          "pet_id": 3777,
-          "name": "幽影树",
-          "form": "突变的样子",
-          "stage": 1,
-          "display_order": 3,
-          "previous_pet_id": 3064,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "入场时偷取敌方场上所有精灵2能量。",
-            "name": "小偷小摸",
-            "skill_id": 200155
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3777/icon.png",
-          "is_final": true
         }
       ]
     },
@@ -4754,29 +4681,11 @@
               "is_final": true
             },
             {
-              "pet_id": 3870,
-              "name": "护主犬",
-              "form": "看守麦田的样子",
-              "stage": 1,
-              "display_order": 3,
-              "previous_pet_id": 3070,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "入场首回合，获得物攻+100%。",
-                "name": "专注力",
-                "skill_id": 200149
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3870/icon.png",
-              "is_final": false
-            },
-            {
               "pet_id": 5018,
               "name": "风暴战犬",
               "form": "本来的样子",
               "stage": 2,
-              "display_order": 4,
+              "display_order": 3,
               "previous_pet_id": 3071,
               "condition": "首领化",
               "condition_level": null,
@@ -4788,47 +4697,10 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5018/icon.png",
               "is_final": false
-            },
-            {
-              "pet_id": 3871,
-              "name": "音速犬",
-              "form": "看守麦田的样子",
-              "stage": 2,
-              "display_order": 5,
-              "previous_pet_id": 3870,
-              "condition": "等级达到 26",
-              "condition_level": 26,
-              "evolution_description": "护主犬升级到26级后进化为音速犬。",
-              "feature": {
-                "desc": "入场首回合，获得物攻+100%。",
-                "name": "专注力",
-                "skill_id": 200149
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3871/icon.png",
-              "is_final": true
-            },
-            {
-              "pet_id": 5075,
-              "name": "风暴战犬",
-              "form": null,
-              "stage": 4,
-              "display_order": 6,
-              "previous_pet_id": 3071,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "入场时，获得物攻+100%，每次行动后-20%。",
-                "name": "全神贯注",
-                "skill_id": 280014
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5075/icon.png",
-              "is_final": false
             }
           ],
           "final_pet_ids": [
-            3071,
-            3871
+            3071
           ]
         },
         {
@@ -4934,29 +4806,11 @@
           "is_final": true
         },
         {
-          "pet_id": 3870,
-          "name": "护主犬",
-          "form": "看守麦田的样子",
-          "stage": 1,
-          "display_order": 3,
-          "previous_pet_id": 3070,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "入场首回合，获得物攻+100%。",
-            "name": "专注力",
-            "skill_id": 200149
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3870/icon.png",
-          "is_final": false
-        },
-        {
           "pet_id": 5018,
           "name": "风暴战犬",
           "form": "本来的样子",
           "stage": 2,
-          "display_order": 4,
+          "display_order": 3,
           "previous_pet_id": 3071,
           "condition": "首领化",
           "condition_level": null,
@@ -4967,42 +4821,6 @@
             "skill_id": 280014
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5018/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 3871,
-          "name": "音速犬",
-          "form": "看守麦田的样子",
-          "stage": 2,
-          "display_order": 5,
-          "previous_pet_id": 3870,
-          "condition": "等级达到 26",
-          "condition_level": 26,
-          "evolution_description": "护主犬升级到26级后进化为音速犬。",
-          "feature": {
-            "desc": "入场首回合，获得物攻+100%。",
-            "name": "专注力",
-            "skill_id": 200149
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3871/icon.png",
-          "is_final": true
-        },
-        {
-          "pet_id": 5075,
-          "name": "风暴战犬",
-          "form": null,
-          "stage": 4,
-          "display_order": 6,
-          "previous_pet_id": 3071,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "入场时，获得物攻+100%，每次行动后-20%。",
-            "name": "全神贯注",
-            "skill_id": 280014
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5075/icon.png",
           "is_final": false
         }
       ]
@@ -5656,7 +5474,7 @@
         {
           "family_id": 38,
           "name": "可立鸡进化链（绅士鸡分支）",
-          "form": null,
+          "form": "绅士鸡分支",
           "members": [
             {
               "pet_id": 3086,
@@ -5720,7 +5538,7 @@
         {
           "family_id": 201,
           "name": "可立鸡进化链（武者鸡分支）",
-          "form": null,
+          "form": "武者鸡分支",
           "members": [
             {
               "pet_id": 3086,
@@ -7080,7 +6898,7 @@
         {
           "family_id": 48,
           "name": "果冻进化链（抹茶布丁分支）",
-          "form": null,
+          "form": "抹茶布丁分支",
           "members": [
             {
               "pet_id": 3118,
@@ -7126,7 +6944,7 @@
         {
           "family_id": 221,
           "name": "果冻进化链（椰浆布丁分支）",
-          "form": null,
+          "form": "椰浆布丁分支",
           "members": [
             {
               "pet_id": 3118,
@@ -7172,7 +6990,7 @@
         {
           "family_id": 222,
           "name": "果冻进化链（熔岩布丁分支）",
-          "form": null,
+          "form": "熔岩布丁分支",
           "members": [
             {
               "pet_id": 3118,
@@ -7325,7 +7143,7 @@
               "name": "雪影冰灵",
               "form": null,
               "stage": 3,
-              "display_order": 6,
+              "display_order": 4,
               "previous_pet_id": 3123,
               "condition": "首领化",
               "condition_level": null,
@@ -7404,7 +7222,7 @@
           "name": "雪影冰灵",
           "form": null,
           "stage": 3,
-          "display_order": 6,
+          "display_order": 4,
           "previous_pet_id": 3123,
           "condition": "首领化",
           "condition_level": null,
@@ -7428,7 +7246,7 @@
         {
           "family_id": 50,
           "name": "脆筒甜甜进化链（樱桃巧克力口味）",
-          "form": null,
+          "form": "樱桃巧克力口味",
           "members": [
             {
               "pet_id": 3124,
@@ -7492,7 +7310,7 @@
         {
           "family_id": 206,
           "name": "脆筒甜甜进化链（樱桃草莓口味）",
-          "form": null,
+          "form": "樱桃草莓口味",
           "members": [
             {
               "pet_id": 3124,
@@ -7556,7 +7374,7 @@
         {
           "family_id": 207,
           "name": "脆筒甜甜进化链（樱桃抹茶口味）",
-          "form": null,
+          "form": "樱桃抹茶口味",
           "members": [
             {
               "pet_id": 3124,
@@ -7620,7 +7438,7 @@
         {
           "family_id": 208,
           "name": "脆筒甜甜进化链（蓝莓巧克力口味）",
-          "form": null,
+          "form": "蓝莓巧克力口味",
           "members": [
             {
               "pet_id": 3124,
@@ -7684,7 +7502,7 @@
         {
           "family_id": 209,
           "name": "脆筒甜甜进化链（蓝莓草莓口味）",
-          "form": null,
+          "form": "蓝莓草莓口味",
           "members": [
             {
               "pet_id": 3124,
@@ -7748,7 +7566,7 @@
         {
           "family_id": 210,
           "name": "脆筒甜甜进化链（蓝莓抹茶口味）",
-          "form": null,
+          "form": "蓝莓抹茶口味",
           "members": [
             {
               "pet_id": 3124,
@@ -7812,7 +7630,7 @@
         {
           "family_id": 211,
           "name": "脆筒甜甜进化链（杨桃巧克力口味）",
-          "form": null,
+          "form": "杨桃巧克力口味",
           "members": [
             {
               "pet_id": 3124,
@@ -7876,7 +7694,7 @@
         {
           "family_id": 212,
           "name": "脆筒甜甜进化链（杨桃草莓口味）",
-          "form": null,
+          "form": "杨桃草莓口味",
           "members": [
             {
               "pet_id": 3124,
@@ -7940,7 +7758,7 @@
         {
           "family_id": 213,
           "name": "脆筒甜甜进化链（杨桃抹茶口味）",
-          "form": null,
+          "form": "杨桃抹茶口味",
           "members": [
             {
               "pet_id": 3124,
@@ -8388,7 +8206,7 @@
         {
           "family_id": 54,
           "name": "毛毛进化链（平常的样子）",
-          "form": null,
+          "form": "平常的样子",
           "members": [
             {
               "pet_id": 3136,
@@ -8452,7 +8270,7 @@
         {
           "family_id": 214,
           "name": "毛毛进化链（幽冥眼的样子）",
-          "form": null,
+          "form": "幽冥眼的样子",
           "members": [
             {
               "pet_id": 3136,
@@ -8516,7 +8334,7 @@
         {
           "family_id": 215,
           "name": "毛毛进化链（喵喵的样子）",
-          "form": null,
+          "form": "喵喵的样子",
           "members": [
             {
               "pet_id": 3136,
@@ -8580,7 +8398,7 @@
         {
           "family_id": 216,
           "name": "毛毛进化链（奇丽花的样子）",
-          "form": null,
+          "form": "奇丽花的样子",
           "members": [
             {
               "pet_id": 3136,
@@ -11866,7 +11684,7 @@
         {
           "family_id": 85,
           "name": "古钟蛇进化链（本来的样子）",
-          "form": null,
+          "form": "本来的样子",
           "members": [
             {
               "pet_id": 3225,
@@ -12170,7 +11988,7 @@
         {
           "family_id": 332,
           "name": "加灵进化链（黑化的样子）",
-          "form": null,
+          "form": "黑化的样子",
           "members": [
             {
               "pet_id": 3230,
@@ -12995,47 +12813,10 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3256/icon.png",
               "is_final": true
-            },
-            {
-              "pet_id": 3873,
-              "name": "奔波鼠",
-              "form": "搬运果实的样子",
-              "stage": 1,
-              "display_order": 3,
-              "previous_pet_id": 3255,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "使用防御技能后，回合结束时脱离。",
-                "name": "奔波命",
-                "skill_id": 200105
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3873/icon.png",
-              "is_final": false
-            },
-            {
-              "pet_id": 3874,
-              "name": "流浪鼠",
-              "form": "搬运果实的样子",
-              "stage": 2,
-              "display_order": 4,
-              "previous_pet_id": 3873,
-              "condition": "等级达到 32",
-              "condition_level": 32,
-              "evolution_description": "奔波鼠升级到32级后进化为流浪鼠。",
-              "feature": {
-                "desc": "使用防御技能后，回合结束时脱离。",
-                "name": "奔波命",
-                "skill_id": 200105
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3874/icon.png",
-              "is_final": true
             }
           ],
           "final_pet_ids": [
-            3256,
-            3874
+            3256
           ]
         },
         {
@@ -13120,42 +12901,6 @@
             "skill_id": 200105
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3256/icon.png",
-          "is_final": true
-        },
-        {
-          "pet_id": 3873,
-          "name": "奔波鼠",
-          "form": "搬运果实的样子",
-          "stage": 1,
-          "display_order": 3,
-          "previous_pet_id": 3255,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "使用防御技能后，回合结束时脱离。",
-            "name": "奔波命",
-            "skill_id": 200105
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3873/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 3874,
-          "name": "流浪鼠",
-          "form": "搬运果实的样子",
-          "stage": 2,
-          "display_order": 4,
-          "previous_pet_id": 3873,
-          "condition": "等级达到 32",
-          "condition_level": 32,
-          "evolution_description": "奔波鼠升级到32级后进化为流浪鼠。",
-          "feature": {
-            "desc": "使用防御技能后，回合结束时脱离。",
-            "name": "奔波命",
-            "skill_id": 200105
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3874/icon.png",
           "is_final": true
         }
       ]
@@ -13829,7 +13574,7 @@
         {
           "family_id": 118,
           "name": "矿晶虫进化链（西瓜碧玺的样子）",
-          "form": null,
+          "form": "西瓜碧玺的样子",
           "members": [
             {
               "pet_id": 3307,
@@ -13893,7 +13638,7 @@
         {
           "family_id": 202,
           "name": "矿晶虫进化链（莲花刚玉的样子）",
-          "form": null,
+          "form": "莲花刚玉的样子",
           "members": [
             {
               "pet_id": 3307,
@@ -13957,7 +13702,7 @@
         {
           "family_id": 203,
           "name": "矿晶虫进化链（星彩榴石的样子）",
-          "form": null,
+          "form": "星彩榴石的样子",
           "members": [
             {
               "pet_id": 3307,
@@ -14021,7 +13766,7 @@
         {
           "family_id": 204,
           "name": "矿晶虫进化链（火山琉璃的样子）",
-          "form": null,
+          "form": "火山琉璃的样子",
           "members": [
             {
               "pet_id": 3307,
@@ -14085,7 +13830,7 @@
         {
           "family_id": 205,
           "name": "矿晶虫进化链（蓝锥矿的样子）",
-          "form": null,
+          "form": "蓝锥矿的样子",
           "members": [
             {
               "pet_id": 3307,
@@ -14149,7 +13894,7 @@
         {
           "family_id": 218,
           "name": "矿晶虫进化链（烧蓝黄金的样子）",
-          "form": null,
+          "form": "烧蓝黄金的样子",
           "members": [
             {
               "pet_id": 3307,
@@ -14533,7 +14278,7 @@
         {
           "family_id": 121,
           "name": "粉星仔进化链（粉耳星兔分支）",
-          "form": null,
+          "form": "粉耳星兔分支",
           "members": [
             {
               "pet_id": 3319,
@@ -14579,7 +14324,7 @@
         {
           "family_id": 242,
           "name": "粉星仔进化链（落陨星兔分支）",
-          "form": null,
+          "form": "落陨星兔分支",
           "members": [
             {
               "pet_id": 3319,
@@ -15173,7 +14918,7 @@
         {
           "family_id": 125,
           "name": "乖乖鹄进化链（翠顶夫人分支）",
-          "form": null,
+          "form": "翠顶夫人分支",
           "members": [
             {
               "pet_id": 3344,
@@ -15237,7 +14982,7 @@
         {
           "family_id": 233,
           "name": "乖乖鹄进化链（黑羽夫人分支）",
-          "form": null,
+          "form": "黑羽夫人分支",
           "members": [
             {
               "pet_id": 3344,
@@ -17498,29 +17243,10 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3430/icon.png",
               "is_final": true
-            },
-            {
-              "pet_id": 3431,
-              "name": "海枝枝",
-              "form": "杏黄百合",
-              "stage": 1,
-              "display_order": 2,
-              "previous_pet_id": 3430,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "敌方精灵离场时，自己获得全技能能耗-3。",
-                "name": "珊瑚骨",
-                "skill_id": 200216
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3431/icon.png",
-              "is_final": true
             }
           ],
           "final_pet_ids": [
-            3430,
-            3431
+            3430
           ]
         },
         {
@@ -17545,29 +17271,10 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3431/icon.png",
               "is_final": true
-            },
-            {
-              "pet_id": 3430,
-              "name": "海枝枝",
-              "form": "碧蓝珊瑚",
-              "stage": 1,
-              "display_order": 2,
-              "previous_pet_id": 3431,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "敌方精灵离场时，自己获得全技能能耗-3。",
-                "name": "珊瑚骨",
-                "skill_id": 200216
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3430/icon.png",
-              "is_final": true
             }
           ],
           "final_pet_ids": [
-            3431,
-            3430
+            3431
           ]
         },
         {
@@ -17592,29 +17299,10 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3432/icon.png",
               "is_final": true
-            },
-            {
-              "pet_id": 3430,
-              "name": "海枝枝",
-              "form": "碧蓝珊瑚",
-              "stage": 1,
-              "display_order": 2,
-              "previous_pet_id": 3432,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "敌方精灵离场时，自己获得全技能能耗-3。",
-                "name": "珊瑚骨",
-                "skill_id": 200216
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3430/icon.png",
-              "is_final": true
             }
           ],
           "final_pet_ids": [
-            3432,
-            3430
+            3432
           ]
         },
         {
@@ -17639,29 +17327,10 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3433/icon.png",
               "is_final": true
-            },
-            {
-              "pet_id": 3430,
-              "name": "海枝枝",
-              "form": "碧蓝珊瑚",
-              "stage": 1,
-              "display_order": 2,
-              "previous_pet_id": 3433,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "敌方精灵离场时，自己获得全技能能耗-3。",
-                "name": "珊瑚骨",
-                "skill_id": 200216
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3430/icon.png",
-              "is_final": true
             }
           ],
           "final_pet_ids": [
-            3433,
-            3430
+            3433
           ]
         }
       ],
@@ -17682,24 +17351,6 @@
             "skill_id": 200216
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3430/icon.png",
-          "is_final": true
-        },
-        {
-          "pet_id": 3431,
-          "name": "海枝枝",
-          "form": "杏黄百合",
-          "stage": 1,
-          "display_order": 2,
-          "previous_pet_id": 3430,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "敌方精灵离场时，自己获得全技能能耗-3。",
-            "name": "珊瑚骨",
-            "skill_id": 200216
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3431/icon.png",
           "is_final": true
         }
       ]
@@ -18846,29 +18497,10 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3499/icon.png",
               "is_final": true
-            },
-            {
-              "pet_id": 3872,
-              "name": "公平鸽",
-              "form": "称量的样子",
-              "stage": 1,
-              "display_order": 2,
-              "previous_pet_id": 3499,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "入场时，复制敌方的增益。在场时，若敌方获得增益自己也会获得。",
-                "name": "衡量",
-                "skill_id": 200221
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3872/icon.png",
-              "is_final": true
             }
           ],
           "final_pet_ids": [
-            3499,
-            3872
+            3499
           ]
         },
         {
@@ -18893,29 +18525,10 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3872/icon.png",
               "is_final": true
-            },
-            {
-              "pet_id": 3499,
-              "name": "公平鸽",
-              "form": "本来的样子",
-              "stage": 1,
-              "display_order": 2,
-              "previous_pet_id": 3872,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "入场时，复制敌方的增益。在场时，若敌方获得增益自己也会获得。",
-                "name": "衡量",
-                "skill_id": 200221
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3499/icon.png",
-              "is_final": true
             }
           ],
           "final_pet_ids": [
-            3872,
-            3499
+            3872
           ]
         }
       ],
@@ -18936,24 +18549,6 @@
             "skill_id": 200221
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3499/icon.png",
-          "is_final": true
-        },
-        {
-          "pet_id": 3872,
-          "name": "公平鸽",
-          "form": "称量的样子",
-          "stage": 1,
-          "display_order": 2,
-          "previous_pet_id": 3499,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "入场时，复制敌方的增益。在场时，若敌方获得增益自己也会获得。",
-            "name": "衡量",
-            "skill_id": 200221
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3872/icon.png",
           "is_final": true
         }
       ]
@@ -19004,47 +18599,10 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3507/icon.png",
               "is_final": true
-            },
-            {
-              "pet_id": 3875,
-              "name": "花怨鳗",
-              "form": "果壳铃的样子",
-              "stage": 1,
-              "display_order": 3,
-              "previous_pet_id": 3506,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "首次入场时，失去自己一半的当前生命。",
-                "name": "铃兰晚钟",
-                "skill_id": 200223
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3875/icon.png",
-              "is_final": false
-            },
-            {
-              "pet_id": 3876,
-              "name": "鳗尾兽",
-              "form": "果壳铃的样子",
-              "stage": 2,
-              "display_order": 4,
-              "previous_pet_id": 3875,
-              "condition": "等级达到 26",
-              "condition_level": 26,
-              "evolution_description": "花怨鳗升级到26级后进化为鳗尾兽。",
-              "feature": {
-                "desc": "首次入场时，失去自己一半的当前生命。",
-                "name": "铃兰晚钟",
-                "skill_id": 200223
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3876/icon.png",
-              "is_final": true
             }
           ],
           "final_pet_ids": [
-            3507,
-            3876
+            3507
           ]
         },
         {
@@ -19130,42 +18688,6 @@
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3507/icon.png",
           "is_final": true
-        },
-        {
-          "pet_id": 3875,
-          "name": "花怨鳗",
-          "form": "果壳铃的样子",
-          "stage": 1,
-          "display_order": 3,
-          "previous_pet_id": 3506,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "首次入场时，失去自己一半的当前生命。",
-            "name": "铃兰晚钟",
-            "skill_id": 200223
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3875/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 3876,
-          "name": "鳗尾兽",
-          "form": "果壳铃的样子",
-          "stage": 2,
-          "display_order": 4,
-          "previous_pet_id": 3875,
-          "condition": "等级达到 26",
-          "condition_level": 26,
-          "evolution_description": "花怨鳗升级到26级后进化为鳗尾兽。",
-          "feature": {
-            "desc": "首次入场时，失去自己一半的当前生命。",
-            "name": "铃兰晚钟",
-            "skill_id": 200223
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3876/icon.png",
-          "is_final": true
         }
       ]
     },
@@ -19233,65 +18755,10 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3510/icon.png",
               "is_final": true
-            },
-            {
-              "pet_id": 3511,
-              "name": "波波螺",
-              "form": "被污染的样子",
-              "stage": 1,
-              "display_order": 4,
-              "previous_pet_id": 3508,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "每携带1个水系技能进入战斗，地系技能能耗-1。",
-                "name": "消波块",
-                "skill_id": 200224
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3511/icon.png",
-              "is_final": false
-            },
-            {
-              "pet_id": 3512,
-              "name": "消波螺",
-              "form": "被污染的样子",
-              "stage": 2,
-              "display_order": 5,
-              "previous_pet_id": 3511,
-              "condition": "等级达到 16",
-              "condition_level": 16,
-              "evolution_description": "波波螺升级到16级后进化为消波螺。",
-              "feature": {
-                "desc": "每携带1个水系技能进入战斗，地系技能能耗-1。",
-                "name": "消波块",
-                "skill_id": 200224
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3512/icon.png",
-              "is_final": false
-            },
-            {
-              "pet_id": 3513,
-              "name": "嗜波螺",
-              "form": "被污染的样子",
-              "stage": 3,
-              "display_order": 6,
-              "previous_pet_id": 3512,
-              "condition": "等级达到 32",
-              "condition_level": 32,
-              "evolution_description": "消波螺升级到32级后进化为嗜波螺。",
-              "feature": {
-                "desc": "每携带1个水系技能进入战斗，地系技能能耗-1。",
-                "name": "消波块",
-                "skill_id": 200224
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3513/icon.png",
-              "is_final": true
             }
           ],
           "final_pet_ids": [
-            3510,
-            3513
+            3510
           ]
         },
         {
@@ -19412,60 +18879,6 @@
             "skill_id": 200224
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3510/icon.png",
-          "is_final": true
-        },
-        {
-          "pet_id": 3511,
-          "name": "波波螺",
-          "form": "被污染的样子",
-          "stage": 1,
-          "display_order": 4,
-          "previous_pet_id": 3508,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "每携带1个水系技能进入战斗，地系技能能耗-1。",
-            "name": "消波块",
-            "skill_id": 200224
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3511/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 3512,
-          "name": "消波螺",
-          "form": "被污染的样子",
-          "stage": 2,
-          "display_order": 5,
-          "previous_pet_id": 3511,
-          "condition": "等级达到 16",
-          "condition_level": 16,
-          "evolution_description": "波波螺升级到16级后进化为消波螺。",
-          "feature": {
-            "desc": "每携带1个水系技能进入战斗，地系技能能耗-1。",
-            "name": "消波块",
-            "skill_id": 200224
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3512/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 3513,
-          "name": "嗜波螺",
-          "form": "被污染的样子",
-          "stage": 3,
-          "display_order": 6,
-          "previous_pet_id": 3512,
-          "condition": "等级达到 32",
-          "condition_level": 32,
-          "evolution_description": "消波螺升级到32级后进化为嗜波螺。",
-          "feature": {
-            "desc": "每携带1个水系技能进入战斗，地系技能能耗-1。",
-            "name": "消波块",
-            "skill_id": 200224
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3513/icon.png",
           "is_final": true
         }
       ]
@@ -19982,7 +19395,7 @@
               "name": "黑猫密探",
               "form": null,
               "stage": 2,
-              "display_order": 4,
+              "display_order": 3,
               "previous_pet_id": 3569,
               "condition": "首领化",
               "condition_level": null,
@@ -20043,7 +19456,7 @@
           "name": "黑猫密探",
           "form": null,
           "stage": 2,
-          "display_order": 4,
+          "display_order": 3,
           "previous_pet_id": 3569,
           "condition": "首领化",
           "condition_level": null,
@@ -20451,7 +19864,7 @@
         {
           "family_id": 197,
           "name": "毛头小蛛进化链（捕尘长绒分支）",
-          "form": null,
+          "form": "捕尘长绒分支",
           "members": [
             {
               "pet_id": 3603,
@@ -20497,7 +19910,7 @@
         {
           "family_id": 244,
           "name": "毛头小蛛进化链（食尘短绒分支）",
-          "form": null,
+          "form": "食尘短绒分支",
           "members": [
             {
               "pet_id": 3603,
@@ -21825,7 +21238,7 @@
         {
           "family_id": 236,
           "name": "画精灵进化链（画间法师手分支）",
-          "form": null,
+          "form": "画间法师手分支",
           "members": [
             {
               "pet_id": 3606,
@@ -21889,7 +21302,7 @@
         {
           "family_id": 237,
           "name": "画精灵进化链（画间沉铁兽分支）",
-          "form": null,
+          "form": "画间沉铁兽分支",
           "members": [
             {
               "pet_id": 3606,
@@ -22017,7 +21430,7 @@
         {
           "family_id": 238,
           "name": "书魔虫进化链（古卷执政官分支）",
-          "form": null,
+          "form": "古卷执政官分支",
           "members": [
             {
               "pet_id": 3610,
@@ -22081,7 +21494,7 @@
         {
           "family_id": 239,
           "name": "书魔虫进化链（古卷匣魔像分支）",
-          "form": null,
+          "form": "古卷匣魔像分支",
           "members": [
             {
               "pet_id": 3610,
@@ -22209,7 +21622,7 @@
         {
           "family_id": 240,
           "name": "呱呱进化链（学院呱呱）",
-          "form": null,
+          "form": "学院呱呱",
           "members": [
             {
               "pet_id": 3620,
@@ -22253,262 +21666,6 @@
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3620/icon.png",
           "is_final": true
-        }
-      ]
-    },
-    {
-      "family_id": 248,
-      "name": "野外首领梦想三三进化链",
-      "multi_form": false,
-      "base_chain_id": 248,
-      "chains": [
-        {
-          "family_id": 248,
-          "name": "野外首领梦想三三进化链（废弃）",
-          "form": "首领形态",
-          "members": [
-            {
-              "pet_id": 4087,
-              "name": "奇梦咪",
-              "form": "首领形态",
-              "stage": 3,
-              "display_order": 3,
-              "previous_pet_id": 4097,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "散发着危险气息的精灵，看不出特性",
-                "name": "？？？",
-                "skill_id": 299002
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/4087/icon.png",
-              "is_final": false
-            },
-            {
-              "pet_id": 3375,
-              "name": "梦想三三",
-              "form": null,
-              "stage": 3,
-              "display_order": 4,
-              "previous_pet_id": 3374,
-              "condition": "等级达到 32",
-              "condition_level": 32,
-              "evolution_description": "气球猫升级到32级后进化为梦想三三。",
-              "feature": {
-                "desc": "使用能耗为3的技能时，获得双攻和双防+20%。",
-                "name": "鼓气",
-                "skill_id": 200096
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3375/icon.png",
-              "is_final": true
-            },
-            {
-              "pet_id": 5024,
-              "name": "奇梦咪",
-              "form": null,
-              "stage": 4,
-              "display_order": 5,
-              "previous_pet_id": 4096,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "使用能耗为3的技能后，获得双攻和双防永久+20%。",
-                "name": "三鼓作气",
-                "skill_id": 280020
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5024/icon.png",
-              "is_final": false
-            }
-          ],
-          "final_pet_ids": [
-            3375
-          ]
-        }
-      ],
-      "members": [
-        {
-          "pet_id": 4087,
-          "name": "奇梦咪",
-          "form": "首领形态",
-          "stage": 3,
-          "display_order": 3,
-          "previous_pet_id": 4097,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "散发着危险气息的精灵，看不出特性",
-            "name": "？？？",
-            "skill_id": 299002
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/4087/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 3375,
-          "name": "梦想三三",
-          "form": null,
-          "stage": 3,
-          "display_order": 4,
-          "previous_pet_id": 3374,
-          "condition": "等级达到 32",
-          "condition_level": 32,
-          "evolution_description": "气球猫升级到32级后进化为梦想三三。",
-          "feature": {
-            "desc": "使用能耗为3的技能时，获得双攻和双防+20%。",
-            "name": "鼓气",
-            "skill_id": 200096
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3375/icon.png",
-          "is_final": true
-        },
-        {
-          "pet_id": 5024,
-          "name": "奇梦咪",
-          "form": null,
-          "stage": 4,
-          "display_order": 5,
-          "previous_pet_id": 4096,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "使用能耗为3的技能后，获得双攻和双防永久+20%。",
-            "name": "三鼓作气",
-            "skill_id": 280020
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5024/icon.png",
-          "is_final": false
-        }
-      ]
-    },
-    {
-      "family_id": 249,
-      "name": "野外首领雪影娃娃进化链",
-      "multi_form": false,
-      "base_chain_id": 249,
-      "chains": [
-        {
-          "family_id": 249,
-          "name": "野外首领雪影娃娃进化链（废弃）",
-          "form": "首领形态",
-          "members": [
-            {
-              "pet_id": 4085,
-              "name": "雪影冰灵",
-              "form": "首领形态",
-              "stage": 3,
-              "display_order": 3,
-              "previous_pet_id": 4099,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "散发着危险气息的精灵，看不出特性",
-                "name": "？？？",
-                "skill_id": 299002
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/4085/icon.png",
-              "is_final": false
-            },
-            {
-              "pet_id": 3123,
-              "name": "雪影娃娃",
-              "form": null,
-              "stage": 3,
-              "display_order": 4,
-              "previous_pet_id": 3122,
-              "condition": "等级达到 48",
-              "condition_level": 48,
-              "evolution_description": "帽兜娃娃升级到48级后进化为雪影娃娃。",
-              "feature": {
-                "desc": "使敌方获得冻结时，也会使其获得全技能能耗+1。",
-                "name": "捉迷藏",
-                "skill_id": 200116
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3123/icon.png",
-              "is_final": true
-            },
-            {
-              "pet_id": 5013,
-              "name": "雪影冰灵",
-              "form": null,
-              "stage": 4,
-              "display_order": 5,
-              "previous_pet_id": 4098,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "自己入场时敌方获得2层冻结，使敌方获得冻结时，也会使其获得全技能能耗+1。",
-                "name": "抓到你了",
-                "skill_id": 280012
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5013/icon.png",
-              "is_final": false
-            }
-          ],
-          "final_pet_ids": [
-            3123
-          ]
-        }
-      ],
-      "members": [
-        {
-          "pet_id": 4085,
-          "name": "雪影冰灵",
-          "form": "首领形态",
-          "stage": 3,
-          "display_order": 3,
-          "previous_pet_id": 4099,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "散发着危险气息的精灵，看不出特性",
-            "name": "？？？",
-            "skill_id": 299002
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/4085/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 3123,
-          "name": "雪影娃娃",
-          "form": null,
-          "stage": 3,
-          "display_order": 4,
-          "previous_pet_id": 3122,
-          "condition": "等级达到 48",
-          "condition_level": 48,
-          "evolution_description": "帽兜娃娃升级到48级后进化为雪影娃娃。",
-          "feature": {
-            "desc": "使敌方获得冻结时，也会使其获得全技能能耗+1。",
-            "name": "捉迷藏",
-            "skill_id": 200116
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3123/icon.png",
-          "is_final": true
-        },
-        {
-          "pet_id": 5013,
-          "name": "雪影冰灵",
-          "form": null,
-          "stage": 4,
-          "display_order": 5,
-          "previous_pet_id": 4098,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "自己入场时敌方获得2层冻结，使敌方获得冻结时，也会使其获得全技能能耗+1。",
-            "name": "抓到你了",
-            "skill_id": 280012
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/5013/icon.png",
-          "is_final": false
         }
       ]
     },
@@ -22558,35 +21715,16 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3660/icon.png",
               "is_final": true
-            },
-            {
-              "pet_id": 3743,
-              "name": "加油蟹",
-              "form": "单只海葵的样子",
-              "stage": 2,
-              "display_order": 3,
-              "previous_pet_id": 3659,
-              "condition": "等级达到 28",
-              "condition_level": 28,
-              "evolution_description": "加油海葵升级到28级后进化为加油蟹。",
-              "feature": {
-                "desc": "若自己在萌化状态下再获得萌化会解除萌化。",
-                "name": "拉拉队长",
-                "skill_id": 200288
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3743/icon.png",
-              "is_final": true
             }
           ],
           "final_pet_ids": [
-            3660,
-            3743
+            3660
           ]
         },
         {
           "family_id": 319,
           "name": "加油海葵进化链（单只海葵的样子）",
-          "form": null,
+          "form": "单只海葵的样子",
           "members": [
             {
               "pet_id": 3659,
@@ -22665,24 +21803,6 @@
             "skill_id": 200288
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3660/icon.png",
-          "is_final": true
-        },
-        {
-          "pet_id": 3743,
-          "name": "加油蟹",
-          "form": "单只海葵的样子",
-          "stage": 2,
-          "display_order": 3,
-          "previous_pet_id": 3659,
-          "condition": "等级达到 28",
-          "condition_level": 28,
-          "evolution_description": "加油海葵升级到28级后进化为加油蟹。",
-          "feature": {
-            "desc": "若自己在萌化状态下再获得萌化会解除萌化。",
-            "name": "拉拉队长",
-            "skill_id": 200288
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3743/icon.png",
           "is_final": true
         }
       ]
@@ -23101,47 +22221,10 @@
               },
               "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3698/icon.png",
               "is_final": true
-            },
-            {
-              "pet_id": 3877,
-              "name": "稻草人",
-              "form": "暖和的样子",
-              "stage": 1,
-              "display_order": 3,
-              "previous_pet_id": 3697,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "自己防御应对成功时，敌方获得萌化。",
-                "name": "守望者",
-                "skill_id": 200295
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3877/icon.png",
-              "is_final": false
-            },
-            {
-              "pet_id": 3878,
-              "name": "稻草守护者",
-              "form": "暖和的样子",
-              "stage": 2,
-              "display_order": 4,
-              "previous_pet_id": 3877,
-              "condition": "等级达到 40",
-              "condition_level": 40,
-              "evolution_description": "稻草人升级到40级后进化为稻草守护者。",
-              "feature": {
-                "desc": "自己防御应对成功时，敌方获得萌化。",
-                "name": "守望者",
-                "skill_id": 200295
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3878/icon.png",
-              "is_final": true
             }
           ],
           "final_pet_ids": [
-            3698,
-            3878
+            3698
           ]
         },
         {
@@ -23226,42 +22309,6 @@
             "skill_id": 200295
           },
           "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3698/icon.png",
-          "is_final": true
-        },
-        {
-          "pet_id": 3877,
-          "name": "稻草人",
-          "form": "暖和的样子",
-          "stage": 1,
-          "display_order": 3,
-          "previous_pet_id": 3697,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "自己防御应对成功时，敌方获得萌化。",
-            "name": "守望者",
-            "skill_id": 200295
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3877/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 3878,
-          "name": "稻草守护者",
-          "form": "暖和的样子",
-          "stage": 2,
-          "display_order": 4,
-          "previous_pet_id": 3877,
-          "condition": "等级达到 40",
-          "condition_level": 40,
-          "evolution_description": "稻草人升级到40级后进化为稻草守护者。",
-          "feature": {
-            "desc": "自己防御应对成功时，敌方获得萌化。",
-            "name": "守望者",
-            "skill_id": 200295
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3878/icon.png",
           "is_final": true
         }
       ]
@@ -24487,7 +23534,7 @@
         {
           "family_id": 308,
           "name": "墨鱿士进化链（混乱鱿彩分支）",
-          "form": null,
+          "form": "混乱鱿彩分支",
           "members": [
             {
               "pet_id": 3577,
@@ -24533,7 +23580,7 @@
         {
           "family_id": 309,
           "name": "墨鱿士进化链（秩序鱿墨分支）",
-          "form": null,
+          "form": "秩序鱿墨分支",
           "members": [
             {
               "pet_id": 3577,
@@ -27141,7 +26188,7 @@
         {
           "family_id": 347,
           "name": "乐乐鲨进化链（柠檬鲨分支）",
-          "form": null,
+          "form": "柠檬鲨分支",
           "members": [
             {
               "pet_id": 3805,
@@ -27187,7 +26234,7 @@
         {
           "family_id": 348,
           "name": "乐乐鲨进化链（虎纹鲨分支）",
-          "form": null,
+          "form": "虎纹鲨分支",
           "members": [
             {
               "pet_id": 3805,
@@ -28041,338 +27088,6 @@
           "is_final": true
         }
       ]
-    },
-    {
-      "family_id": 359,
-      "name": "绿草精灵进化链",
-      "multi_form": false,
-      "base_chain_id": 359,
-      "chains": [
-        {
-          "family_id": 359,
-          "name": "绿草精灵进化链（幻鸩园丁的样子）",
-          "form": "幻鸩园丁的样子",
-          "members": [
-            {
-              "pet_id": 3775,
-              "name": "布灵",
-              "form": null,
-              "stage": 1,
-              "display_order": 3,
-              "previous_pet_id": null,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-                "name": "旧玩具",
-                "skill_id": 200325
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3775/icon.png",
-              "is_final": false
-            },
-            {
-              "pet_id": 3776,
-              "name": "布灵布灵",
-              "form": null,
-              "stage": 2,
-              "display_order": 21,
-              "previous_pet_id": 3775,
-              "condition": "等级达到 42",
-              "condition_level": 42,
-              "evolution_description": "布灵升级到42级后进化为布灵布灵。",
-              "feature": {
-                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-                "name": "旧玩具",
-                "skill_id": 200325
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
-              "is_final": true
-            }
-          ],
-          "final_pet_ids": [
-            3776
-          ]
-        }
-      ],
-      "members": [
-        {
-          "pet_id": 3775,
-          "name": "布灵",
-          "form": null,
-          "stage": 1,
-          "display_order": 3,
-          "previous_pet_id": null,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-            "name": "旧玩具",
-            "skill_id": 200325
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3775/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 3776,
-          "name": "布灵布灵",
-          "form": null,
-          "stage": 2,
-          "display_order": 21,
-          "previous_pet_id": 3775,
-          "condition": "等级达到 42",
-          "condition_level": 42,
-          "evolution_description": "布灵升级到42级后进化为布灵布灵。",
-          "feature": {
-            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-            "name": "旧玩具",
-            "skill_id": 200325
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
-          "is_final": true
-        }
-      ]
-    },
-    {
-      "family_id": 363,
-      "name": "记忆石进化链",
-      "multi_form": false,
-      "base_chain_id": 363,
-      "chains": [
-        {
-          "family_id": 363,
-          "name": "记忆石进化链（毒崇拜的样子）",
-          "form": "毒崇拜的样子",
-          "members": [
-            {
-              "pet_id": 3776,
-              "name": "布灵布灵",
-              "form": null,
-              "stage": 2,
-              "display_order": 2,
-              "previous_pet_id": 3775,
-              "condition": "等级达到 42",
-              "condition_level": 42,
-              "evolution_description": "布灵升级到42级后进化为布灵布灵。",
-              "feature": {
-                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-                "name": "旧玩具",
-                "skill_id": 200325
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
-              "is_final": true
-            }
-          ],
-          "final_pet_ids": [
-            3776
-          ]
-        }
-      ],
-      "members": [
-        {
-          "pet_id": 3776,
-          "name": "布灵布灵",
-          "form": null,
-          "stage": 2,
-          "display_order": 2,
-          "previous_pet_id": 3775,
-          "condition": "等级达到 42",
-          "condition_level": 42,
-          "evolution_description": "布灵升级到42级后进化为布灵布灵。",
-          "feature": {
-            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-            "name": "旧玩具",
-            "skill_id": 200325
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
-          "is_final": true
-        }
-      ]
-    },
-    {
-      "family_id": 368,
-      "name": "矮脚爬爬进化链",
-      "multi_form": false,
-      "base_chain_id": 368,
-      "chains": [
-        {
-          "family_id": 368,
-          "name": "矮脚爬爬进化链（毒之花的样子）",
-          "form": "毒之花的样子",
-          "members": [
-            {
-              "pet_id": 3775,
-              "name": "布灵",
-              "form": null,
-              "stage": 1,
-              "display_order": 3,
-              "previous_pet_id": null,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-                "name": "旧玩具",
-                "skill_id": 200325
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3775/icon.png",
-              "is_final": false
-            },
-            {
-              "pet_id": 3776,
-              "name": "布灵布灵",
-              "form": null,
-              "stage": 2,
-              "display_order": 21,
-              "previous_pet_id": 3775,
-              "condition": "等级达到 42",
-              "condition_level": 42,
-              "evolution_description": "布灵升级到42级后进化为布灵布灵。",
-              "feature": {
-                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-                "name": "旧玩具",
-                "skill_id": 200325
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
-              "is_final": true
-            }
-          ],
-          "final_pet_ids": [
-            3776
-          ]
-        }
-      ],
-      "members": [
-        {
-          "pet_id": 3775,
-          "name": "布灵",
-          "form": null,
-          "stage": 1,
-          "display_order": 3,
-          "previous_pet_id": null,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-            "name": "旧玩具",
-            "skill_id": 200325
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3775/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 3776,
-          "name": "布灵布灵",
-          "form": null,
-          "stage": 2,
-          "display_order": 21,
-          "previous_pet_id": 3775,
-          "condition": "等级达到 42",
-          "condition_level": 42,
-          "evolution_description": "布灵升级到42级后进化为布灵布灵。",
-          "feature": {
-            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-            "name": "旧玩具",
-            "skill_id": 200325
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
-          "is_final": true
-        }
-      ]
-    },
-    {
-      "family_id": 374,
-      "name": "缇塔进化链",
-      "multi_form": false,
-      "base_chain_id": 374,
-      "chains": [
-        {
-          "family_id": 374,
-          "name": "缇塔进化链（星币VIII的样子）",
-          "form": "星币VIII的样子",
-          "members": [
-            {
-              "pet_id": 3775,
-              "name": "布灵",
-              "form": null,
-              "stage": 1,
-              "display_order": 3,
-              "previous_pet_id": null,
-              "condition": null,
-              "condition_level": null,
-              "evolution_description": null,
-              "feature": {
-                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-                "name": "旧玩具",
-                "skill_id": 200325
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3775/icon.png",
-              "is_final": false
-            },
-            {
-              "pet_id": 3776,
-              "name": "布灵布灵",
-              "form": null,
-              "stage": 2,
-              "display_order": 21,
-              "previous_pet_id": 3775,
-              "condition": "等级达到 42",
-              "condition_level": 42,
-              "evolution_description": "布灵升级到42级后进化为布灵布灵。",
-              "feature": {
-                "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-                "name": "旧玩具",
-                "skill_id": 200325
-              },
-              "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
-              "is_final": true
-            }
-          ],
-          "final_pet_ids": [
-            3776
-          ]
-        }
-      ],
-      "members": [
-        {
-          "pet_id": 3775,
-          "name": "布灵",
-          "form": null,
-          "stage": 1,
-          "display_order": 3,
-          "previous_pet_id": null,
-          "condition": null,
-          "condition_level": null,
-          "evolution_description": null,
-          "feature": {
-            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-            "name": "旧玩具",
-            "skill_id": 200325
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3775/icon.png",
-          "is_final": false
-        },
-        {
-          "pet_id": 3776,
-          "name": "布灵布灵",
-          "form": null,
-          "stage": 2,
-          "display_order": 21,
-          "previous_pet_id": 3775,
-          "condition": "等级达到 42",
-          "condition_level": 42,
-          "evolution_description": "布灵升级到42级后进化为布灵布灵。",
-          "feature": {
-            "desc": "己方精灵每使用过1个不同系别的技能，自己入场时获得双攻+10%。",
-            "name": "旧玩具",
-            "skill_id": 200325
-          },
-          "icon": "https://wegame.shallow.ink/api/v1/resources/wiki/assets/pets/3776/icon.png",
-          "is_final": true
-        }
-      ]
     }
   ],
   "pet_family_map": {
@@ -28933,7 +27648,6 @@
     "3774": 327,
     "3775": 328,
     "3776": 328,
-    "3777": 29,
     "3784": 335,
     "3785": 335,
     "3796": 336,
@@ -28974,9 +27688,6 @@
     "3876": 184,
     "3877": 282,
     "3878": 282,
-    "4076": 28,
-    "4085": 249,
-    "4087": 248,
     "5001": 118,
     "5002": 28,
     "5003": 4,
@@ -29427,8 +28138,8 @@
     "3475": 175,
     "3476": 175,
     "3477": 175,
-    "3478": 50,
-    "3479": 50,
+    "3478": 211,
+    "3479": 208,
     "3481": 217,
     "3482": 217,
     "3483": 132,
@@ -29486,11 +28197,11 @@
     "3552": 226,
     "3553": 227,
     "3554": 228,
-    "3555": 225,
-    "3556": 225,
-    "3557": 226,
-    "3558": 227,
-    "3559": 228,
+    "3555": 229,
+    "3556": 229,
+    "3557": 230,
+    "3558": 231,
+    "3559": 232,
     "3565": 192,
     "3566": 192,
     "3568": 193,
@@ -29604,7 +28315,6 @@
     "3774": 327,
     "3775": 328,
     "3776": 328,
-    "3777": 29,
     "3784": 335,
     "3785": 335,
     "3796": 336,
@@ -29618,7 +28328,7 @@
     "3804": 346,
     "3805": 347,
     "3806": 347,
-    "3807": 347,
+    "3807": 348,
     "3808": 349,
     "3809": 349,
     "3810": 350,
@@ -29645,9 +28355,6 @@
     "3876": 388,
     "3877": 389,
     "3878": 389,
-    "4076": 28,
-    "4085": 249,
-    "4087": 248,
     "5001": 118,
     "5002": 28,
     "5003": 4,
@@ -29690,10 +28397,10 @@
     "5040": 226,
     "5041": 227,
     "5042": 228,
-    "5043": 225,
-    "5044": 226,
-    "5045": 227,
-    "5046": 228,
+    "5043": 229,
+    "5044": 230,
+    "5045": 231,
+    "5046": 232,
     "5047": 202,
     "5048": 203,
     "5049": 204,
@@ -29717,63 +28424,8 @@
     "5068": 63,
     "5075": 385
   },
-  "backfilled_family": {
-    "4005": 1,
-    "4006": 2,
-    "4007": 4,
-    "4011": 8,
-    "4012": 9,
-    "4019": 12,
-    "4020": 123,
-    "4021": 26,
-    "4022": 17,
-    "4064": 29,
-    "4072": 43,
-    "4073": 47,
-    "4074": 16,
-    "4078": 32,
-    "4079": 118,
-    "4083": 193,
-    "4084": 45,
-    "4086": 225,
-    "4088": 128,
-    "4089": 191,
-    "4090": 81,
-    "4101": 132,
-    "4102": 181,
-    "4104": 58
-  },
-  "family_conflicts": {
-    "3123": [
-      49,
-      249
-    ],
-    "3375": [
-      131,
-      248
-    ],
-    "3775": [
-      328,
-      359,
-      368,
-      374
-    ],
-    "3776": [
-      328,
-      359,
-      363,
-      368,
-      374
-    ],
-    "5013": [
-      49,
-      249
-    ],
-    "5024": [
-      131,
-      248
-    ]
-  },
+  "backfilled_family": {},
+  "family_conflicts": {},
   "final_pet_ids": [
     3004,
     3005,
@@ -30029,7 +28681,6 @@
     3772,
     3774,
     3776,
-    3777,
     3785,
     3796,
     3798,
